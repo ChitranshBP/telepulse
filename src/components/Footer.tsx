@@ -1,0 +1,103 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-[#001F5B] text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Logo and Description */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/WhatsApp Image 2025-09-16 at 13.37.39_d96be5ef.jpg" 
+                alt="Telepulse Logo" 
+                className="w-10 h-10 object-contain"
+              />
+              <span className="text-2xl font-bold">Telepulse</span>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Revolutionizing pediatric critical care through innovative telemedicine solutions. 
+              Saving lives, one connection at a time.
+            </p>
+            <Link
+              to="/contact"
+              className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-lg hover:scale-105 transition-all duration-300 inline-block"
+            >
+              Request a Demo
+            </Link>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-3">
+              <li><Link to="/about-us" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">About Us</Link></li>
+              <li><Link to="/solutions" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">Solutions</Link></li>
+              <li><Link to="/technology" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">Technology</Link></li>
+              <li><Link to="/impact" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">Impact</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">Careers</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-[#00CFE6]" />
+                <span className="text-gray-300">info@telepulse.com</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-[#00CFE6]" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-[#00CFE6] mt-1" />
+                <span className="text-gray-300">123 Medical Center Dr<br />Healthcare City, HC 12345</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex space-x-6 mb-4 md:mb-0">
+            <Link to="/legal" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200 text-sm">
+              Privacy Policy
+            </Link>
+            <Link to="/legal" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200 text-sm">
+              Terms of Service
+            </Link>
+            <Link to="/legal" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200 text-sm">
+              Telemedicine Disclaimer
+            </Link>
+          </div>
+          
+          <div className="flex items-center space-x-6">
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
+                <Youtube className="w-5 h-5" />
+              </a>
+            </div>
+            <p className="text-gray-400 text-sm">
+              © 2025 Telepulse. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
