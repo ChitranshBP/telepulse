@@ -90,9 +90,9 @@ const NICUTeleCare: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/433267/pexels-photo-433267.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="random/NICU-Tele-care.png"
                 alt="NICU Technology"
-                className="rounded-3xl shadow-2xl"
+                className="rounded-3xl h-[500px] w-[800px] shadow-2xl"
               />
             </div>
           </div>

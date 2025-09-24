@@ -90,7 +90,7 @@ const PediatricTeleICU: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="random/Pediatric-Tele-ICU.png"
                 alt="Pediatric ICU Technology"
                 className="rounded-3xl shadow-2xl"
               />

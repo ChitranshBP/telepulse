@@ -120,7 +120,7 @@ const AboutUs: React.FC = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="random/Our-Vision.png"
                 alt="Healthcare Technology"
                 className="rounded-3xl shadow-2xl"
               />
