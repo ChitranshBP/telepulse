@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Heart, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,12 +27,12 @@ const Header: React.FC = () => {
         { name: 'NICU Tele-care', path: '/nicu' },
         { name: 'Pediatric Tele-ICU', path: '/picu' },
         { name: 'Tele-Education', path: '/education' },
-        { name: 'Research & Innovation', path: '/research' }
+        // { name: 'Research & Innovation', path: '/research' }
       ]
     },
     { name: 'Technology', path: '/technology' },
-    { name: 'Impact', path: '/impact' },
-    { name: 'Partners', path: '/partners' },
+    // { name: 'Impact', path: '/impact' },
+    // { name: 'Partners', path: '/partners' },
     { name: 'Resources', path: '/resources' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },

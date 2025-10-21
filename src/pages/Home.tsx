@@ -4,17 +4,17 @@ import {
   Heart, 
   Users, 
   Monitor, 
-  Shield, 
+  // Shield, 
   Award,
   ArrowRight,
   Play,
-  ChevronLeft,
-  ChevronRight,
-  Building2,
+  // ChevronLeft,
+  // ChevronRight,
+  // Building2,
   Stethoscope,
   GraduationCap,
   Search,
-  CheckCircle,
+ 
   TrendingUp,
   Clock,
   Globe,
@@ -25,31 +25,31 @@ import {
   Activity
 } from 'lucide-react';
 
-const CountUp: React.FC<{ end: number; duration?: number; suffix?: string }> = ({ 
-  end, 
-  duration = 2000, 
-  suffix = '' 
-}) => {
-  const [count, setCount] = useState(0);
+// const CountUp: React.FC<{ end: number; duration?: number; suffix?: string }> = ({ 
+//   end, 
+//   duration = 2000, 
+//   suffix = '' 
+// }) => {
+//   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    let startTimestamp: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }, [end, duration]);
+//   useEffect(() => {
+//     let startTimestamp: number | null = null;
+//     const step = (timestamp: number) => {
+//       if (!startTimestamp) startTimestamp = timestamp;
+//       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+//       setCount(Math.floor(progress * end));
+//       if (progress < 1) {
+//         window.requestAnimationFrame(step);
+//       }
+//     };
+//     window.requestAnimationFrame(step);
+//   }, [end, duration]);
 
-  return <span>{count.toLocaleString()}{suffix}</span>;
-};
+//   return <span>{count.toLocaleString()}{suffix}</span>;
+// };
 
 const Home: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  // const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -58,83 +58,85 @@ const Home: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const stats = [
-    { value: 15000, suffix: '+', label: 'Lives Saved', icon: Heart },
-    { value: 250, suffix: '+', label: 'Partner Hospitals', icon: Building2 },
-    { value: 50000, suffix: '+', label: 'Patients Monitored', icon: Monitor },
-    { value: 99.9, suffix: '%', label: 'System Uptime', icon: Shield },
-  ];
+  // const stats = [
+  //   { value: 15000, suffix: '+', label: 'Lives Saved', icon: Heart },
+  //   { value: 250, suffix: '+', label: 'Partner Hospitals', icon: Building2 },
+  //   { value: 50000, suffix: '+', label: 'Patients Monitored', icon: Monitor },
+  //   { value: 99.9, suffix: '%', label: 'System Uptime', icon: Shield },
+  // ];
 
   const solutions = [
+
+        {
+      icon: Stethoscope,
+      title: 'Pediatric Tele-ICU',
+      description: 'Comprehensive critical care with real-time intervention',
+      // metrics: '35% outcome improvement',
+      path: '/picu'
+    },
     {
       icon: Heart,
       title: 'NICU Tele-care',
       description: 'Specialized neonatal monitoring with 24/7 expert consultation',
-      metrics: '40% mortality reduction',
+      // metrics: '40% mortality reduction',
       path: '/nicu'
     },
-    {
-      icon: Stethoscope,
-      title: 'Pediatric Tele-ICU',
-      description: 'Comprehensive critical care with real-time intervention',
-      metrics: '35% outcome improvement',
-      path: '/picu'
-    },
+
     {
       icon: GraduationCap,
       title: 'Tele-Education',
       description: 'Professional development and certification programs',
-      metrics: '95% completion rate',
+      // metrics: '95% completion rate',
       path: '/education'
     },
     {
       icon: Search,
       title: 'Research & Innovation',
       description: 'Evidence-based protocols and clinical studies',
-      metrics: '50+ published studies',
+      // metrics: '50+ published studies',
       path: '/research'
     },
   ];
 
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen',
-      title: 'Chief of Pediatrics',
-      hospital: 'Children\'s Medical Center',
-      content: 'Telepulse transformed our NICU operations with measurable improvements in patient outcomes.',
-      image: 'https://images.pexels.com/photos/559827/pexels-photo-559827.jpeg?auto=compress&cs=tinysrgb&w=400',
-      metric: '40% reduction in mortality'
-    },
-    {
-      name: 'Dr. Michael Rodriguez',
-      title: 'Director of Critical Care',
-      hospital: 'Regional Hospital Network',
-      content: 'The platform\'s intuitive design and expert support have revolutionized our pediatric care delivery.',
-      image: 'https://images.pexels.com/photos/582750/pexels-photo-582750.jpeg?auto=compress&cs=tinysrgb&w=400',
-      metric: '50% faster response times'
-    },
-    {
-      name: 'Dr. Lisa Thompson',
-      title: 'Neonatologist',
-      hospital: 'University Medical Center',
-      content: 'World-class expertise at every bedside - the collaborative care model is revolutionary.',
-      image: 'https://images.pexels.com/photos/1068352/pexels-photo-1068352.jpeg?auto=compress&cs=tinysrgb&w=400',
-      metric: '95% staff satisfaction'
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     name: 'Dr. Sarah Chen',
+  //     title: 'Chief of Pediatrics',
+  //     hospital: 'Children\'s Medical Center',
+  //     content: 'Telepulse transformed our NICU operations with measurable improvements in patient outcomes.',
+  //     image: 'https://images.pexels.com/photos/559827/pexels-photo-559827.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //     metric: '40% reduction in mortality'
+  //   },
+  //   {
+  //     name: 'Dr. Michael Rodriguez',
+  //     title: 'Director of Critical Care',
+  //     hospital: 'Regional Hospital Network',
+  //     content: 'The platform\'s intuitive design and expert support have revolutionized our pediatric care delivery.',
+  //     image: 'https://images.pexels.com/photos/582750/pexels-photo-582750.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //     metric: '50% faster response times'
+  //   },
+  //   {
+  //     name: 'Dr. Lisa Thompson',
+  //     title: 'Neonatologist',
+  //     hospital: 'University Medical Center',
+  //     content: 'World-class expertise at every bedside - the collaborative care model is revolutionary.',
+  //     image: 'https://images.pexels.com/photos/1068352/pexels-photo-1068352.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //     metric: '95% staff satisfaction'
+  //   },
+  // ];
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
+  // const nextTestimonial = () => {
+  //   setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  // };
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  // const prevTestimonial = () => {
+  //   setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // };
 
-  useEffect(() => {
-    const timer = setInterval(nextTestimonial, 6000);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(nextTestimonial, 6000);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <div className="pt-20">
@@ -155,10 +157,10 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                {/* <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                   <div className="w-2 h-2 bg-[#00CFE6] rounded-full mr-2 animate-pulse"></div>
                   <span className="text-white/90 text-sm font-medium">Trusted by 250+ Healthcare Institutions</span>
-                </div>
+                </div> */}
                 
                 <div className="space-y-4">
                   <h1 className="text-3xl lg:text-5xl font-semibold text-white leading-tight">
@@ -198,18 +200,18 @@ const Home: React.FC = () => {
           
               </div>
               
-              <div className="relative lg:block hidden">
-                <div className="relative w-full h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
+              <div className="relative lg:block hidden flex items-center justify-center">
+                <div className="relative w-full h-auto rounded-2xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
                   <img
                     src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFieXxlbnwwfHwwfHx8Mg%3D%3D"
                     alt="Medical Technology"
-                    className="w-full h-full object-cover opacity-80"
+                    className="w-full h-auto object-cover opacity-80"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#001F5B]/60 via-transparent to-transparent"></div>
-                  
-                 
-                  
-                  
+
+
+
+
                 </div>
               </div>
             </div>
@@ -218,7 +220,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Value Proposition Section */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-semibold text-[#001F5B] mb-3">Why Healthcare Leaders Choose Telepulse</h2>
@@ -241,44 +243,9 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Parallax Section */}
-      <section className="relative py-16 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=1600)',
-            transform: `translateY(${scrollY * 0.5}px)`
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-[#001F5B]/80"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-2xl font-semibold mb-4">Bridging the Gap in Pediatric Expertise</h2>
-          <p className="text-base mb-6 max-w-3xl mx-auto opacity-90">
-            Every minute counts in pediatric critical care. Our platform ensures expert consultation 
-            is available instantly, regardless of location or time.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <Clock className="w-8 h-8 text-[#00CFE6] mx-auto mb-3" />
-              <h3 className="text-base font-medium mb-2">Instant Access</h3>
-              <p className="text-sm opacity-80">Connect with specialists in under 60 seconds</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <Globe className="w-8 h-8 text-[#00CFE6] mx-auto mb-3" />
-              <h3 className="text-base font-medium mb-2">Global Reach</h3>
-              <p className="text-sm opacity-80">Expert care available 24/7 across time zones</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <Target className="w-8 h-8 text-[#00CFE6] mx-auto mb-3" />
-              <h3 className="text-base font-medium mb-2">Proven Results</h3>
-              <p className="text-sm opacity-80">35% improvement in patient outcomes</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Solutions Showcase */}
       <section className="py-12 bg-gray-50">
@@ -305,9 +272,10 @@ const Home: React.FC = () => {
                     <h3 className="text-base font-medium text-[#001F5B] mb-2 group-hover:text-[#B22222] transition-colors duration-200">
                       {solution.title}
                     </h3>
-                    <p className="text-gray-600 mb-2 text-sm leading-relaxed">{solution.description}</p>
+                   
                     <div className="flex items-center justify-between">
-                      <span className="text-[#00CFE6] font-medium text-sm">{solution.metrics}</span>
+                       <p className="text-gray-600 mb-2 text-sm leading-relaxed">{solution.description}</p>
+                      {/* <span className="text-[#00CFE6] font-medium text-sm">{solution.metrics}</span> */}
                       <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#B22222] group-hover:translate-x-1 transition-all duration-200" />
                     </div>
                   </div>
@@ -317,7 +285,42 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
+      {/* Parallax Section */}
+      <section className="relative py-16 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=1600)',
+            transform: `translateY(${scrollY * 0.5}px)`
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-[#001F5B]/80"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-2xl font-semibold mb-4">Bridging the Gap in Pediatric Expertise</h2>
+          <p className="text-base mb-6 max-w-3xl mx-auto opacity-90">
+            Every minute counts in pediatric critical care. Our platform ensures expert consultation 
+            is available instantly, regardless of location or time.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <Clock className="w-8 h-8 text-[#00CFE6] mx-auto mb-3" />
+              <h3 className="text-base font-medium mb-2">Instant Access</h3>
+              <p className="text-sm opacity-80">Connect with specialists instantly</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <Globe className="w-8 h-8 text-[#00CFE6] mx-auto mb-3" />
+              <h3 className="text-base font-medium mb-2">Global Reach</h3>
+              <p className="text-sm opacity-80">Expert care available 24/7 across time zones</p>
+            </div>
+      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+  <Heart className="w-8 h-8 text-[#00CFE6] mx-auto mb-3" />
+  <h3 className="text-base font-medium mb-2">Compassionate Care</h3>
+  <p className="text-sm opacity-80">Personalized attention and empathy in every treatment journey.</p>
+</div>
+          </div>
+        </div>
+      </section>
       {/* ROI & Business Impact */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -346,7 +349,7 @@ const Home: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-[#001F5B] mb-1">Quality Metrics</h3>
-                    <p className="text-gray-600 text-sm">Improved HCAHPS scores and accreditation ratings</p>
+                    <p className="text-gray-600 text-sm">Improved scores and accreditation ratings</p>
                   </div>
                 </div>
                 
@@ -362,7 +365,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             
-            <div className="relative">
+            {/* <div className="relative">
               <div className="bg-gradient-to-br from-[#001F5B] to-[#002A7A] rounded-2xl p-8 text-white">
                 <h3 className="text-lg font-medium mb-4">Implementation Timeline</h3>
                 <div className="space-y-4">
@@ -389,13 +392,23 @@ const Home: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <div className="relative flex items-center justify-center">
+  <div className=" rounded-2xl p-4 md:p-8 text-white overflow-hidden">
+    <img
+      src="/images/timeline-graphic.png"
+      alt="Implementation Timeline"
+      className="w-full h-auto rounded-xl object-cover"
+    />
+  </div>
+</div>
+
           </div>
         </div>
       </section>
 
       {/* Customer Success Stories */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      {/* <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl font-semibold mb-3">Trusted by Healthcare Leaders</h2>
@@ -461,7 +474,7 @@ const Home: React.FC = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What We Do Section */}
       <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
@@ -558,13 +571,13 @@ const Home: React.FC = () => {
                 <div className="w-10 h-10 bg-[#00CFE6] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-base font-medium text-[#001F5B] mb-2">AI-Powered Insights</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Machine learning algorithms analyze millions of data points to provide 
-                    predictive insights and evidence-based treatment recommendations.
-                  </p>
-                </div>
+      <div>
+  <h3 className="text-base font-medium text-[#001F5B] mb-2">Unified Diagnostic Platform</h3>
+  <p className="text-gray-600 leading-relaxed">
+    Access Echo, ECG, and Ultrasound reports all in one place—streamlining diagnostics and 
+    improving coordination between clinicians for faster, more informed decisions.
+  </p>
+</div>
               </div>
             </div>
           </div>
@@ -651,12 +664,12 @@ const Home: React.FC = () => {
             >
               Schedule Demo
             </Link>
-            <Link
+            {/* <Link
               to="/impact"
               className="border-2 border-white text-white px-6 py-2.5 rounded-lg font-medium hover:bg-white hover:text-[#001F5B] transition-all duration-300"
             >
               View Case Studies
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

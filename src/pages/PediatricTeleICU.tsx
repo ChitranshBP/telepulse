@@ -37,12 +37,12 @@ const PediatricTeleICU: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { value: '35%', label: 'Improved Outcomes', icon: Activity },
-    { value: '50%', label: 'Faster Response', icon: Clock },
-    { value: '30%', label: 'Fewer Transfers', icon: Shield },
-    { value: '24/7', label: 'Expert Coverage', icon: Users }
-  ];
+  // const stats = [
+  //   { value: '35%', label: 'Improved Outcomes', icon: Activity },
+  //   { value: '50%', label: 'Faster Response', icon: Clock },
+  //   { value: '30%', label: 'Fewer Transfers', icon: Shield },
+  //   { value: '24/7', label: 'Expert Coverage', icon: Users }
+  // ];
 
   return (
     <div className="pt-20">
@@ -88,11 +88,11 @@ const PediatricTeleICU: React.FC = () => {
                 expert consultation, and evidence-based protocols for optimal patient care.
               </p>
             </div>
-            <div>
+            <div className="flex items-center justify-center">
               <img
                 src="random/Pediatric-Tele-ICU.png"
                 alt="Pediatric ICU Technology"
-                className="rounded-3xl shadow-2xl"
+                className="rounded-3xl shadow-2xl w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -145,7 +145,7 @@ const PediatricTeleICU: React.FC = () => {
       </section>
 
       {/* Statistics */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      {/* <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Proven Impact</h2>
@@ -166,10 +166,10 @@ const PediatricTeleICU: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Study */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 lg:p-8 shadow-xl">
             <div className="text-center mb-8">
@@ -226,7 +226,7 @@ const PediatricTeleICU: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-12 bg-[#B22222] text-white">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, CheckCircle, ArrowRight, Users, Clock, Award, TrendingUp } from 'lucide-react';
+import { Heart, CheckCircle, ArrowRight, Users, Clock, Award } from 'lucide-react';
 
 const NICUTeleCare: React.FC = () => {
   const benefits = [
@@ -37,12 +37,12 @@ const NICUTeleCare: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { value: '40%', label: 'Reduction in Mortality', icon: TrendingUp },
-    { value: '25%', label: 'Shorter Length of Stay', icon: Clock },
-    { value: '95%', label: 'Family Satisfaction', icon: Heart },
-    { value: '24/7', label: 'Expert Availability', icon: Users }
-  ];
+  // const stats = [
+  //   { value: '40%', label: 'Reduction in Mortality', icon: TrendingUp },
+  //   { value: '25%', label: 'Shorter Length of Stay', icon: Clock },
+  //   { value: '95%', label: 'Family Satisfaction', icon: Heart },
+  //   { value: '24/7', label: 'Expert Availability', icon: Users }
+  // ];
 
   return (
     <div className="pt-20">
@@ -88,11 +88,11 @@ const NICUTeleCare: React.FC = () => {
                 care planning to ensure every newborn receives expert-level care.
               </p>
             </div>
-            <div>
+            <div className="flex items-center justify-center">
               <img
                 src="random/NICU-Tele-care.png"
                 alt="NICU Technology"
-                className="rounded-3xl h-[500px] w-[800px] shadow-2xl"
+                className="rounded-3xl shadow-2xl w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -145,7 +145,7 @@ const NICUTeleCare: React.FC = () => {
       </section>
 
       {/* Statistics */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      {/* <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Proven Results</h2>
@@ -166,10 +166,10 @@ const NICUTeleCare: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Study */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 lg:p-8 shadow-xl">
             <div className="text-center mb-8">
@@ -225,7 +225,7 @@ const NICUTeleCare: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-12 bg-[#B22222] text-white">

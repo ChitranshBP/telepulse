@@ -4,6 +4,28 @@ import { Heart, Stethoscope, GraduationCap, Search, ArrowRight, CheckCircle, Use
 
 const Solutions: React.FC = () => {
   const solutions = [
+
+        {
+      id: 'picu',
+      icon: Stethoscope,
+      title: 'Pediatric Tele-ICU',
+      subtitle: 'Comprehensive Critical Care',
+      description: 'Real-time monitoring and intervention for pediatric patients in intensive care units across all age groups.',
+      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800',
+      problem: 'Shortage of pediatric intensivists and uneven distribution of expertise leads to care gaps.',
+      model: 'Continuous remote monitoring with immediate intervention capabilities and collaborative care planning.',
+      benefits: [
+        'Enhanced patient safety through continuous monitoring',
+        'Rapid response to critical changes in patient condition',
+        'Improved clinical decision-making with expert consultation',
+        'Reduced complications and readmission rates',
+        'Optimized resource utilization'
+      ],
+      caseStudy: {
+        title: 'Children\'s Hospital Network Implementation',
+        outcome: '35% improvement in patient outcomes and 50% faster response times to critical events.'
+      }
+    },
     {
       id: 'nicu',
       icon: Heart,
@@ -25,27 +47,7 @@ const Solutions: React.FC = () => {
         outcome: '40% reduction in mortality rates and 25% decrease in average length of stay within the first year of implementation.'
       }
     },
-    {
-      id: 'picu',
-      icon: Stethoscope,
-      title: 'Pediatric Tele-ICU',
-      subtitle: 'Comprehensive Critical Care',
-      description: 'Real-time monitoring and intervention for pediatric patients in intensive care units across all age groups.',
-      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800',
-      problem: 'Shortage of pediatric intensivists and uneven distribution of expertise leads to care gaps.',
-      model: 'Continuous remote monitoring with immediate intervention capabilities and collaborative care planning.',
-      benefits: [
-        'Enhanced patient safety through continuous monitoring',
-        'Rapid response to critical changes in patient condition',
-        'Improved clinical decision-making with expert consultation',
-        'Reduced complications and readmission rates',
-        'Optimized resource utilization'
-      ],
-      caseStudy: {
-        title: 'Children\'s Hospital Network Implementation',
-        outcome: '35% improvement in patient outcomes and 50% faster response times to critical events.'
-      }
-    },
+
     {
       id: 'education',
       icon: GraduationCap,
@@ -228,11 +230,11 @@ const Solutions: React.FC = () => {
                 </div>
               </div>
               
-              <div className={index % 2 === 0 ? '' : 'lg:order-1'}>
+              <div className={`${index % 2 === 0 ? '' : 'lg:order-1'} flex items-center justify-center`}>
                 <img
                   src={solution.image}
                   alt={solution.title}
-                  className="rounded-2xl shadow-xl"
+                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
                 />
               </div>
             </div>

@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Monitor, 
-  Brain, 
+  // Brain, 
   Shield, 
-  Zap,
-  Activity,
+  // Zap,
+  // Activity,
   BarChart3,
   Bell,
   Workflow,
@@ -38,23 +38,23 @@ const Technology: React.FC = () => {
     }
   ];
 
-  const aiFeatures = [
-    {
-      title: 'Predictive Analytics',
-      description: 'Machine learning algorithms that identify potential complications before they occur, enabling proactive interventions.',
-      icon: Brain
-    },
-    {
-      title: 'Clinical Decision Support',
-      description: 'AI-powered recommendations based on evidence-based protocols and patient-specific data analysis.',
-      icon: Zap
-    },
-    {
-      title: 'Automated Documentation',
-      description: 'Intelligent documentation assistance that reduces administrative burden while ensuring compliance.',
-      icon: Activity
-    }
-  ];
+  // const aiFeatures = [
+  //   {
+  //     title: 'Predictive Analytics',
+  //     description: 'Machine learning algorithms that identify potential complications before they occur, enabling proactive interventions.',
+  //     icon: Brain
+  //   },
+  //   {
+  //     title: 'Clinical Decision Support',
+  //     description: 'AI-powered recommendations based on evidence-based protocols and patient-specific data analysis.',
+  //     icon: Zap
+  //   },
+  //   {
+  //     title: 'Automated Documentation',
+  //     description: 'Intelligent documentation assistance that reduces administrative burden while ensuring compliance.',
+  //     icon: Activity
+  //   }
+  // ];
 
   const securityFeatures = [
     'HIPAA Compliant Architecture',
@@ -125,11 +125,11 @@ const Technology: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="flex items-center justify-center">
               <img
                 src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Philips Integration"
-                className="rounded-2xl shadow-xl"
+                className="rounded-2xl shadow-xl w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -149,7 +149,7 @@ const Technology: React.FC = () => {
       </section>
 
       {/* AI & Automation */}
-      <section className="py-12 bg-gray-50">
+      {/* <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">AI & Automation</h2>
@@ -218,7 +218,7 @@ const Technology: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Data Security */}
       <section className="py-12 bg-[#001F5B] text-white">
@@ -252,11 +252,11 @@ const Technology: React.FC = () => {
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img
                 src="https://images.pexels.com/photos/4386410/pexels-photo-4386410.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Security Technology"
-                className="rounded-2xl shadow-xl"
+                className="rounded-2xl shadow-xl w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#001F5B]/40 to-transparent rounded-2xl"></div>
             </div>
@@ -298,24 +298,24 @@ const Technology: React.FC = () => {
                 </div>
                 <h4 className="font-medium text-[#001F5B] text-sm">Philips IntelliVue</h4>
               </div>
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="w-16 h-16 bg-[#001F5B] rounded-xl flex items-center justify-center mb-3">
                   <Activity className="w-10 h-10 text-white" />
                 </div>
                 <h4 className="font-medium text-[#001F5B] text-sm">Epic EHR</h4>
-              </div>
-              <div className="text-center">
+              </div> */}
+              {/* <div className="text-center">
                 <div className="w-16 h-16 bg-[#B22222] rounded-xl flex items-center justify-center mb-3">
                   <BarChart3 className="w-10 h-10 text-white" />
                 </div>
                 <h4 className="font-medium text-[#001F5B] text-sm">Cerner PowerChart</h4>
-              </div>
-              <div className="text-center">
+              </div> */}
+              {/* <div className="text-center">
                 <div className="w-16 h-16 bg-[#001F5B] rounded-xl flex items-center justify-center mb-3">
                   <Workflow className="w-10 h-10 text-white" />
                 </div>
                 <h4 className="font-medium text-[#001F5B] text-sm">MEDITECH</h4>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

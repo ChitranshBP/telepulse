@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Target, Eye, Award, Users, ArrowRight } from 'lucide-react';
+import { 
+  // Heart, 
+  Target,
+   Eye,
+  //  Award, 
+   Users,
+    ArrowRight
+   } from 'lucide-react';
 
 const AboutUs: React.FC = () => {
   const leadership = [
@@ -34,43 +41,43 @@ const AboutUs: React.FC = () => {
     }
   ];
 
-  const timeline = [
-    {
-      year: '2018',
-      title: 'Company Founded',
-      description: 'Telepulse was founded by a team of pediatric specialists and technologists with a vision to revolutionize critical care.'
-    },
-    {
-      year: '2019',
-      title: 'Philips Partnership',
-      description: 'Strategic partnership with Philips Healthcare to integrate advanced monitoring technology with telemedicine platforms.'
-    },
-    {
-      year: '2020',
-      title: 'First Deployment',
-      description: 'Successful pilot program at Children\'s Hospital of Philadelphia, demonstrating significant improvement in patient outcomes.'
-    },
-    {
-      year: '2021',
-      title: 'Scale & Expansion',
-      description: 'Expanded to serve 50+ hospitals across North America, monitoring thousands of critical care patients daily.'
-    },
-    {
-      year: '2022',
-      title: 'AI Integration',
-      description: 'Launched advanced AI-powered predictive analytics for early intervention and improved clinical decision-making.'
-    },
-    {
-      year: '2023',
-      title: 'Global Reach',
-      description: 'International expansion to Europe and Asia, serving over 200 healthcare institutions worldwide.'
-    },
-    {
-      year: '2024',
-      title: 'Research Innovation',
-      description: 'Established dedicated research division, publishing groundbreaking studies on telemedicine effectiveness in pediatric care.'
-    }
-  ];
+  // const timeline = [
+  //   {
+  //     year: '2018',
+  //     title: 'Company Founded',
+  //     description: 'Telepulse was founded by a team of pediatric specialists and technologists with a vision to revolutionize critical care.'
+  //   },
+  //   {
+  //     year: '2019',
+  //     title: 'Philips Partnership',
+  //     description: 'Strategic partnership with Philips Healthcare to integrate advanced monitoring technology with telemedicine platforms.'
+  //   },
+  //   {
+  //     year: '2020',
+  //     title: 'First Deployment',
+  //     description: 'Successful pilot program at Children\'s Hospital of Philadelphia, demonstrating significant improvement in patient outcomes.'
+  //   },
+  //   {
+  //     year: '2021',
+  //     title: 'Scale & Expansion',
+  //     description: 'Expanded to serve 50+ hospitals across North America, monitoring thousands of critical care patients daily.'
+  //   },
+  //   {
+  //     year: '2022',
+  //     title: 'AI Integration',
+  //     description: 'Launched advanced AI-powered predictive analytics for early intervention and improved clinical decision-making.'
+  //   },
+  //   {
+  //     year: '2023',
+  //     title: 'Global Reach',
+  //     description: 'International expansion to Europe and Asia, serving over 200 healthcare institutions worldwide.'
+  //   },
+  //   {
+  //     year: '2024',
+  //     title: 'Research Innovation',
+  //     description: 'Established dedicated research division, publishing groundbreaking studies on telemedicine effectiveness in pediatric care.'
+  //   }
+  // ];
 
   return (
     <div className="pt-20">
@@ -118,11 +125,11 @@ const AboutUs: React.FC = () => {
                 seamless collaboration between specialists and bedside caregivers.
               </p>
             </div>
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img
-                src="random/Our-Vision.png"
+                src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Healthcare Technology"
-                className="rounded-3xl shadow-2xl"
+                className="rounded-3xl shadow-2xl w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#001F5B]/20 to-transparent rounded-3xl"></div>
             </div>
@@ -131,7 +138,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Telepulse Story & Philips Collaboration */}
-      <section className="py-12 bg-gray-50">
+      {/* <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Our Story</h2>
@@ -194,7 +201,7 @@ const AboutUs: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Leadership Profiles */}
       <section className="py-12 bg-white">
@@ -231,7 +238,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      {/* <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Our Journey</h2>
@@ -260,7 +267,7 @@ const AboutUs: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-12 bg-[#B22222] text-white">
