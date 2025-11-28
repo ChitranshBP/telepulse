@@ -75,7 +75,7 @@ const Technology: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Medical Technology"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -129,7 +129,7 @@ const Technology: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Philips Integration"
-                className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                className="feature-image shadow-xl"
               />
             </div>
           </div>
@@ -256,7 +256,7 @@ const Technology: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/4386410/pexels-photo-4386410.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Security Technology"
-                className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                className="feature-image shadow-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#001F5B]/40 to-transparent rounded-2xl"></div>
             </div>

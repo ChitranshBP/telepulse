@@ -52,7 +52,7 @@ const PediatricTeleICU: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Pediatric ICU"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ const PediatricTeleICU: React.FC = () => {
               <img
                 src="random/Pediatric-Tele-ICU.png"
                 alt="Pediatric ICU Technology"
-                className="rounded-3xl shadow-2xl w-full h-auto object-cover"
+                className="feature-image shadow-2xl"
               />
             </div>
           </div>

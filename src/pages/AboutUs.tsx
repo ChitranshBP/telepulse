@@ -87,7 +87,7 @@ const AboutUs: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Medical Team"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,7 +129,7 @@ const AboutUs: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Healthcare Technology"
-                className="rounded-3xl shadow-2xl w-full h-auto object-cover"
+                className="feature-image shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#001F5B]/20 to-transparent rounded-3xl"></div>
             </div>
@@ -168,7 +168,7 @@ const AboutUs: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/4386410/pexels-photo-4386410.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Medical Collaboration"
-                className="rounded-3xl shadow-xl"
+                className="feature-image shadow-xl"
               />
             </div>
           </div>
@@ -196,7 +196,7 @@ const AboutUs: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/4386433/pexels-photo-4386433.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Philips Technology"
-                className="rounded-3xl shadow-xl"
+                className="feature-image shadow-xl"
               />
             </div>
           </div>

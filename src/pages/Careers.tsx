@@ -150,7 +150,7 @@ const Careers: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Healthcare Careers"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -225,7 +225,7 @@ const Careers: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Team Collaboration"
-                className="rounded-2xl shadow-xl"
+                className="feature-image shadow-xl"
               />
             </div>
           </div>

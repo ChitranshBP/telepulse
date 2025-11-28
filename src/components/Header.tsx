@@ -20,8 +20,8 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about-us' },
-    { 
-      name: 'Solutions', 
+    {
+      name: 'Solutions',
       path: '/solutions',
       submenu: [
         { name: 'NICU Tele-care', path: '/nicu' },

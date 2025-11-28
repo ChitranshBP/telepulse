@@ -54,3 +54,65 @@ select:focus-visible {
   outline: 2px solid #00CFE6;
   outline-offset: 2px;
 }
+
+/* Image sizing and alignment utilities */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Constrain content images to reasonable sizes */
+.content-image {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Hero background images */
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: none;
+}
+
+/* Case study and feature images */
+.feature-image {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+/* Testimonial and profile images */
+.profile-image {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+/* Partner logo images */
+.partner-logo {
+  max-width: 200px;
+  max-height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Card images with fixed container heights */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+/* Leadership/team profile images */
+.team-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}

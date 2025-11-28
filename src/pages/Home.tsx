@@ -141,77 +141,126 @@ const Home: React.FC = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#001F5B] via-[#001A4D] to-black">
-        <div className="absolute inset-0 opacity-10">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#001F5B] via-[#003875] to-[#001A4D] min-h-[600px]">
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 207, 230, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 207, 230, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
+              radial-gradient(circle at 20% 50%, rgba(0, 207, 230, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(178, 34, 34, 0.3) 0%, transparent 50%)
+            `
           }}></div>
         </div>
 
-        <div className="relative z-10 flex items-center">
-          <div className="container my-16 mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+
+        {/* Main Content */}
+        <div className="relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              
-              <div className="space-y-6">
-                {/* <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                  <div className="w-2 h-2 bg-[#00CFE6] rounded-full mr-2 animate-pulse"></div>
+
+              {/* Left Column - Content */}
+              <div className="space-y-6 text-center lg:text-left">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                  <div className="w-2 h-2 bg-[#00CFE6] rounded-full animate-pulse"></div>
                   <span className="text-white/90 text-sm font-medium">Trusted by 250+ Healthcare Institutions</span>
-                </div> */}
-                
+                </div>
+
+                {/* Main Heading */}
                 <div className="space-y-4">
-                  <h1 className="text-3xl lg:text-5xl font-semibold text-white leading-tight">
-                    Transform Pediatric
-                    <span className="block bg-gradient-to-r from-[#00CFE6] to-[#0099CC] bg-clip-text text-transparent">
-                      Critical Care
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    Revolutionize
+                    <span className="block bg-gradient-to-r from-[#00CFE6] via-[#00A8CC] to-[#B22222] bg-clip-text text-transparent">
+                      Pediatric Care
                     </span>
                   </h1>
-                  <div className="w-16 h-1 bg-gradient-to-r from-[#00CFE6] to-transparent rounded-full"></div>
+                  <div className="w-20 h-1.5 bg-gradient-to-r from-[#B22222] via-[#00CFE6] to-transparent rounded-full mx-auto lg:mx-0"></div>
                 </div>
-                
-                <p className="text-base text-white/80 leading-relaxed max-w-xl">
-                  Connect your medical teams with world-class pediatric specialists through our advanced telemedicine platform. 
-                  <span className="block mt-2 text-[#00CFE6] font-medium">Improve outcomes. Save lives. Scale expertise.</span>
+
+                {/* Description */}
+                <p className="text-lg text-white/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Connect your medical teams with world-class pediatric specialists through our
+                  advanced telemedicine platform. Real-time monitoring, expert consultation,
+                  and proven outcomes.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+
+                {/* Key Benefits */}
+                <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                    <Heart className="w-4 h-4 text-[#B22222]" />
+                    <span className="text-white/90 text-sm">Save Lives</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                    <TrendingUp className="w-4 h-4 text-[#00CFE6]" />
+                    <span className="text-white/90 text-sm">Improve Outcomes</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
+                    <Users className="w-4 h-4 text-[#00CFE6]" />
+                    <span className="text-white/90 text-sm">Expert Access 24/7</span>
+                  </div>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                   <Link
                     to="/contact"
-                    className="group px-5 py-2.5 bg-gradient-to-r from-[#001F5B] to-[#002A7A] text-white rounded-lg font-medium overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-[#00CFE6]/25 hover:scale-105"
+                    className="group px-8 py-3.5 bg-gradient-to-r from-[#B22222] to-[#8B1818] text-white rounded-xl font-semibold shadow-lg shadow-[#B22222]/25 hover:shadow-xl hover:shadow-[#B22222]/40 hover:scale-105 transition-all duration-300"
                   >
-                    <div className="relative flex items-center justify-center space-x-2">
-                      <span>Schedule Demo</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <div className="flex items-center justify-center gap-2">
+                      <span>Get Started</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </Link>
-                  
+
                   <Link
                     to="/solutions"
-                    className="group px-5 py-2.5 border border-white/30 text-white rounded-lg font-medium backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="group px-8 py-3.5 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300"
                   >
-                    <Play className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                    <span>View Solutions</span>
+                    <div className="flex items-center justify-center gap-2">
+                      <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                      <span>View Solutions</span>
+                    </div>
                   </Link>
                 </div>
-                
-          
               </div>
-              
-              <div className="relative lg:block hidden flex items-center justify-center">
-                <div className="relative w-full h-auto rounded-2xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
+
+              {/* Right Column - Image */}
+              <div className="relative lg:block hidden">
+                {/* Decorative Elements */}
+                <div className="absolute -top-10 -right-10 w-72 h-72 bg-[#00CFE6]/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#B22222]/10 rounded-full blur-3xl"></div>
+
+                {/* Main Image Container */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFieXxlbnwwfHwwfHx8Mg%3D%3D"
-                    alt="Medical Technology"
-                    className="w-full h-auto object-cover opacity-80"
+                    src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Pediatric Healthcare"
+                    className="w-full h-[500px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#001F5B]/60 via-transparent to-transparent"></div>
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#001F5B]/40 via-transparent to-[#00CFE6]/20"></div>
 
-
-
-
+                  {/* Floating Stats Cards */}
+                  <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-3">
+                    <div className="bg-white/95 backdrop-blur-lg rounded-xl p-4 shadow-xl">
+                      <div className="text-2xl font-bold text-[#B22222]">15K+</div>
+                      <div className="text-xs text-gray-600 font-medium">Lives Saved</div>
+                    </div>
+                    <div className="bg-white/95 backdrop-blur-lg rounded-xl p-4 shadow-xl">
+                      <div className="text-2xl font-bold text-[#001F5B]">250+</div>
+                      <div className="text-xs text-gray-600 font-medium">Partner Hospitals</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

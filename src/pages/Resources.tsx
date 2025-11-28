@@ -124,7 +124,7 @@ const Resources: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Healthcare Resources"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

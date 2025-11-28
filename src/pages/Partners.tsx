@@ -145,7 +145,7 @@ const Partners: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/4386410/pexels-photo-4386410.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Healthcare Partnership"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -174,7 +174,7 @@ const Partners: React.FC = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="mx-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                    className="partner-logo opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-[#001F5B] mb-2">{partner.name}</h3>
@@ -246,7 +246,7 @@ const Partners: React.FC = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    className="partner-logo opacity-80 hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
               </div>

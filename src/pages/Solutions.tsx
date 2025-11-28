@@ -100,7 +100,7 @@ const Solutions: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Medical Solutions"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -234,7 +234,7 @@ const Solutions: React.FC = () => {
                 <img
                   src={solution.image}
                   alt={solution.title}
-                  className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                  className="feature-image shadow-xl"
                 />
               </div>
             </div>

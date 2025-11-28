@@ -79,7 +79,7 @@ const TeleEducation: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Medical Education"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,7 +119,7 @@ const TeleEducation: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Medical Education Technology"
-                className="rounded-3xl shadow-2xl"
+                className="feature-image shadow-2xl"
               />
             </div>
           </div>

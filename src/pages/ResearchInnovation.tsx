@@ -79,7 +79,7 @@ const ResearchInnovation: React.FC = () => {
           <img
             src="https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Medical Research"
-            className="w-full h-full object-cover"
+            className="hero-bg-image"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,7 +119,7 @@ const ResearchInnovation: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Medical Research Technology"
-                className="rounded-3xl shadow-2xl"
+                className="feature-image shadow-2xl"
               />
             </div>
           </div>
