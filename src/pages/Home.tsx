@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Heart, 
-  Users, 
-  Monitor, 
-  // Shield, 
+import {
+  Heart,
+  Users,
+  Monitor,
+  // Shield,
   Award,
   ArrowRight,
   Play,
@@ -14,7 +14,7 @@ import {
   Stethoscope,
   GraduationCap,
   Search,
- 
+
   TrendingUp,
   Clock,
   Globe,
@@ -22,7 +22,11 @@ import {
   Target,
   BarChart3,
   Brain,
-  Activity
+  Activity,
+  CheckCircle,
+  Video,
+  Database,
+  Shield
 } from 'lucide-react';
 
 // const CountUp: React.FC<{ end: number; duration?: number; suffix?: string }> = ({ 
@@ -96,6 +100,48 @@ const Home: React.FC = () => {
       // metrics: '50+ published studies',
       path: '/research'
     },
+  ];
+
+  const technologyPartners = [
+    {
+      id: "rtwo",
+      name: "RTWO",
+      icon: Video,
+      title: "Real-Time Streaming & Tele-ICU Connectivity Partner",
+      tagline: "Ultra-low latency ICU video streaming for real-time critical care",
+      features: [
+        "Ultra-low latency live ICU streaming",
+        "Two-way audio & video communication",
+        "Encrypted communication channels",
+        "High-availability streaming for 24×7 connectivity"
+      ]
+    },
+    {
+      id: "aishan",
+      name: "Aishan Technologies",
+      icon: Database,
+      title: "Medical Data & Device Integration Partner",
+      tagline: "Real-time vital sign data and ICU device integration",
+      features: [
+        "Real-time vital signs ingestion (HR, SpO₂, BP, ECG)",
+        "Device-to-cloud ICU connectivity",
+        "Smart alerts & early warning notifications",
+        "FHIR/HL7 compatible data standards"
+      ]
+    },
+    {
+      id: "philips",
+      name: "Philips IntelliVue",
+      icon: Monitor,
+      title: "ICU Medical Device & Monitoring Partner",
+      tagline: "Gold-standard clinical-grade patient monitoring systems",
+      features: [
+        "Compatibility with Philips IntelliVue monitors",
+        "Real-time vitals extraction",
+        "Multi-parameter monitoring (ECG, IBP, SpO₂, CO₂)",
+        "Clinically validated accuracy"
+      ]
+    }
   ];
 
   // const testimonials = [
@@ -698,12 +744,81 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Technology Partners Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#001F5B] mb-4">Powered by Industry Leaders</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our platform integrates seamlessly with best-in-class technology partners to deliver
+              unmatched reliability and clinical excellence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {technologyPartners.map((partner) => (
+              <div
+                key={partner.id}
+                className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#00CFE6]/30"
+              >
+                {/* Partner Icon & Name */}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#001F5B] to-[#B22222] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <partner.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-[#001F5B] group-hover:text-[#B22222] transition-colors duration-300">
+                      {partner.name}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Tagline */}
+                <p className="text-sm text-[#00CFE6] font-semibold mb-3">
+                  {partner.tagline}
+                </p>
+
+                {/* Features List */}
+                <div className="space-y-2 mb-4">
+                  {partner.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-[#00CFE6] mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-600">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Learn More Link */}
+                <Link
+                  to="/technology"
+                  className="inline-flex items-center gap-2 text-[#B22222] font-medium text-sm hover:gap-3 transition-all duration-300"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* View All Partners CTA */}
+          <div className="text-center mt-12">
+            <Link
+              to="/technology"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-[#001F5B] text-white rounded-xl font-semibold hover:bg-[#B22222] transition-all duration-300 hover:scale-105"
+            >
+              <span>Explore Our Technology Stack</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 bg-gradient-to-r from-[#B22222] to-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-semibold mb-3">Ready to Transform Your Pediatric Care?</h2>
           <p className="text-base mb-6 max-w-3xl mx-auto opacity-90">
-            Join 250+ healthcare institutions already improving outcomes with Telepulse. 
+            Join 250+ healthcare institutions already improving outcomes with Telepulse.
             Schedule a personalized demo today.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">

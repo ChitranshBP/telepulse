@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  // Heart, 
+import {
+  // Heart,
   Target,
    Eye,
-  //  Award, 
+  //  Award,
    Users,
-    ArrowRight
+    ArrowRight,
+    Video,
+    Database,
+    Monitor,
+    Shield
    } from 'lucide-react';
 
 const AboutUs: React.FC = () => {
@@ -268,6 +272,99 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
       </section> */}
+
+      {/* Technology Partners Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#001F5B] mb-4">Strategic Technology Partners</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We collaborate with industry-leading technology partners to deliver world-class
+              telemedicine solutions for pediatric critical care
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* RTWO Partner */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#00CFE6]/30">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] rounded-xl flex items-center justify-center mb-6">
+                <Video className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#001F5B] mb-3">RTWO</h3>
+              <p className="text-sm text-[#00CFE6] font-semibold mb-4">
+                Real-Time Streaming & Tele-ICU Connectivity Partner
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Ultra-low latency video streaming technology that enables seamless real-time communication
+                between Telepulse command centers and hospital ICU floors, ensuring uninterrupted 24/7 connectivity.
+              </p>
+            </div>
+
+            {/* Aishan Technologies Partner */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#00CFE6]/30">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] rounded-xl flex items-center justify-center mb-6">
+                <Database className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#001F5B] mb-3">Aishan Technologies</h3>
+              <p className="text-sm text-[#00CFE6] font-semibold mb-4">
+                Medical Data & Device Integration Partner
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Intelligent data pipelines that connect ICU devices and vitals monitoring systems directly
+                to Telepulse, enabling real-time display, alerts, and clinical decision support.
+              </p>
+            </div>
+
+            {/* Philips Partner */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-[#00CFE6]/30">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] rounded-xl flex items-center justify-center mb-6">
+                <Monitor className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#001F5B] mb-3">Philips IntelliVue</h3>
+              <p className="text-sm text-[#00CFE6] font-semibold mb-4">
+                ICU Medical Device & Monitoring Partner
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Seamless integration with Philips IntelliVue monitoring systems, providing clinically
+                validated patient data, real-time waveforms, and multi-parameter monitoring.
+              </p>
+            </div>
+          </div>
+
+          {/* Partnership Benefits */}
+          <div className="bg-gradient-to-br from-[#001F5B] to-[#003875] rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-3">Partnership Excellence</h3>
+              <p className="text-white/80 max-w-2xl mx-auto">
+                Our technology partnerships ensure reliability, security, and clinical accuracy
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-[#00CFE6]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Shield className="w-6 h-6 text-[#00CFE6]" />
+                </div>
+                <h4 className="font-semibold mb-2">Secure & Compliant</h4>
+                <p className="text-sm text-white/70">HIPAA-compliant infrastructure with end-to-end encryption</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-[#00CFE6]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Monitor className="w-6 h-6 text-[#00CFE6]" />
+                </div>
+                <h4 className="font-semibold mb-2">Clinically Validated</h4>
+                <p className="text-sm text-white/70">Gold-standard monitoring with proven accuracy</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-[#00CFE6]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Video className="w-6 h-6 text-[#00CFE6]" />
+                </div>
+                <h4 className="font-semibold mb-2">Real-Time Connectivity</h4>
+                <p className="text-sm text-white/70">Ultra-low latency for instant clinical decisions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
       <section className="py-12 bg-[#B22222] text-white">
