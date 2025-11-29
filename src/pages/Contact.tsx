@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Calendar, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -62,8 +62,8 @@ const Contact: React.FC = () => {
               <div className="space-y-2">
                 <p className="font-medium text-[#001F5B] text-sm">Sales & Partnerships</p>
                 <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
-                <p className="font-medium text-[#001F5B] mt-3 text-sm">Technical Support</p>
-                <p className="text-gray-600 text-sm">+1 (555) 234-5678</p>
+                {/* <p className="font-medium text-[#001F5B] mt-3 text-sm">Technical Support</p>
+                <p className="text-gray-600 text-sm">+1 (555) 234-5678</p> */}
               </div>
             </div>
             
@@ -74,10 +74,10 @@ const Contact: React.FC = () => {
               <h3 className="text-lg font-semibold text-[#001F5B] mb-3">Email Contact</h3>
               <p className="text-gray-600 mb-3 text-sm">Send us a message anytime</p>
               <div className="space-y-2">
-                <p className="font-medium text-[#001F5B] text-sm">General Inquiries</p>
-                <p className="text-gray-600 text-sm">info@telepulse.com</p>
-                <p className="font-medium text-[#001F5B] mt-3 text-sm">Partnership Opportunities</p>
-                <p className="text-gray-600 text-sm">partnerships@telepulse.com</p>
+                <p className="font-medium text-[#001F5B] text-sm">For Inquiries</p>
+                <p className="text-gray-600 text-sm">info@telepulse.in</p>
+                {/* <p className="font-medium text-[#001F5B] mt-3 text-sm">Partnership Opportunities</p> */}
+                {/* <p className="text-gray-600 text-sm">partnerships@telepulse.com</p> */}
               </div>
             </div>
             
@@ -88,315 +88,203 @@ const Contact: React.FC = () => {
               <h3 className="text-lg font-semibold text-[#001F5B] mb-3">Our Headquarters</h3>
               <p className="text-gray-600 mb-3 text-sm">Visit us in person</p>
               <div className="space-y-2">
-                <p className="font-medium text-[#001F5B] text-sm">Telepulse Inc.</p>
-                <p className="text-gray-600 text-sm">123 Medical Innovation Drive<br />Healthcare City, HC 12345<br />United States</p>
+                <p className="font-medium text-[#001F5B] text-sm">Telepulse</p>
+                <p className="text-gray-600 text-sm">AKSHAYA, 22 (270), 4th Main Road<br />Mahalakshmi Layout<br />Bangalore 560086, India</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Contact Form and Map Side by Side */}
       <section className="py-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Send Us a Message</h2>
-            <p className="text-base text-gray-600 max-w-3xl mx-auto">
-              Fill out the form below and our team will get back to you within 24 hours
-            </p>
-          </div>
-
-          {isSubmitted ? (
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-[#B22222] rounded-full flex items-center justify-center">
-                <CheckCircle className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-[#001F5B] mb-3">Message Sent Successfully!</h3>
-              <p className="text-base text-gray-600 mb-6">
-                Thank you for reaching out. Our team will review your message and get back to you within 24 hours.
-              </p>
-              <button
-                onClick={() => setIsSubmitted(false)}
-                className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto"
-              >
-                Send Another Message
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[#001F5B] mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-[#001F5B] mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label htmlFor="organization" className="block text-sm font-medium text-[#001F5B] mb-2">
-                    Organization *
-                  </label>
-                  <input
-                    type="text"
-                    id="organization"
-                    name="organization"
-                    required
-                    value={formData.organization}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                    placeholder="Hospital or organization name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="role" className="block text-sm font-medium text-[#001F5B] mb-2">
-                    Your Role
-                  </label>
-                  <select
-                    id="role"
-                    name="role"
-                    value={formData.role}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                  >
-                    <option value="">Select your role</option>
-                    <option value="physician">Physician</option>
-                    <option value="nurse">Nurse</option>
-                    <option value="administrator">Administrator</option>
-                    <option value="it-director">IT Director</option>
-                    <option value="ceo-cmo">CEO/CMO</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-[#001F5B] mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="inquiry" className="block text-sm font-medium text-[#001F5B] mb-2">
-                    Inquiry Type *
-                  </label>
-                  <select
-                    id="inquiry"
-                    name="inquiry"
-                    required
-                    value={formData.inquiry}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                  >
-                    <option value="">Select inquiry type</option>
-                    <option value="demo">Request a Demo</option>
-                    <option value="partnership">Partnership Inquiry</option>
-                    <option value="implementation">Implementation Support</option>
-                    <option value="training">Training & Education</option>
-                    <option value="technical">Technical Support</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-[#001F5B] mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 resize-none"
-                  placeholder="Tell us about your needs, challenges, and how we can help..."
-                ></textarea>
-              </div>
-
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto"
-                >
-                  <Send className="w-5 h-5" />
-                  <span>Send Message</span>
-                </button>
-                <p className="text-sm text-gray-500 mt-4">
-                  We'll respond within 24 hours during business days
-                </p>
-              </div>
-            </form>
-          )}
-        </div>
-      </section>
-
-      {/* Demo Booking */}
-      <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Schedule a Personalized Demo</h2>
-            <p className="text-base text-gray-300 max-w-3xl mx-auto">
-              See Telepulse in action with a customized demonstration tailored to your institution's needs
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Get In Touch With Us</h2>
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
+              Fill out the form or visit our office. We're here to help transform your pediatric critical care capabilities.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Contact Form */}
             <div>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-5 h-5 bg-[#00CFE6] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-[#001F5B] text-sm font-bold">1</span>
+              {isSubmitted ? (
+                <div className="bg-white rounded-2xl shadow-xl p-8 text-center h-full flex flex-col justify-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-[#B22222] rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-10 h-10 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-base font-medium mb-1">Discovery Call</h3>
-                    <p className="text-gray-300 text-sm">Understand your current challenges and specific needs</p>
-                  </div>
+                  <h3 className="text-xl font-semibold text-[#001F5B] mb-3">Message Sent Successfully!</h3>
+                  <p className="text-base text-gray-600 mb-6">
+                    Thank you for reaching out. Our team will review your message and get back to you within 24 hours.
+                  </p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto"
+                  >
+                    Send Another Message
+                  </button>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-5 h-5 bg-[#00CFE6] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-[#001F5B] text-sm font-bold">2</span>
-                  </div>
-                  <div>
-                    <h3 className="text-base font-medium mb-1">Live Platform Demo</h3>
-                    <p className="text-gray-300 text-sm">Interactive walkthrough of relevant features and capabilities</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-5 h-5 bg-[#00CFE6] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-[#001F5B] text-sm font-bold">3</span>
-                  </div>
-                  <div>
-                    <h3 className="text-base font-medium mb-1">Custom Implementation Plan</h3>
-                    <p className="text-gray-300 text-sm">Tailored roadmap for deployment at your institution</p>
-                  </div>
-                </div>
-              </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 h-full">
+                  <h3 className="text-xl font-semibold text-[#001F5B] mb-6">Send Us a Message</h3>
 
-              <div className="mt-6 p-4 bg-white/10 backdrop-blur-lg rounded-xl">
-                <div className="flex items-center mb-4">
-                  <Calendar className="w-6 h-6 text-[#00CFE6] mr-3" />
-                  <h4 className="text-base font-medium">Typical Demo Schedule</h4>
-                </div>
-                <ul className="space-y-1 text-gray-300 text-sm">
-                  <li>• Duration: 45-60 minutes</li>
-                  <li>• Available: Monday-Friday, 9 AM - 6 PM EST</li>
-                  <li>• Format: Video conference or in-person</li>
-                  <li>• Attendees: Your key stakeholders welcome</li>
-                </ul>
-              </div>
+                  <div className="space-y-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-[#001F5B] mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                        placeholder="Your full name"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-[#001F5B] mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-[#001F5B] mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                        placeholder="+91 XXXXX XXXXX"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="organization" className="block text-sm font-medium text-[#001F5B] mb-2">
+                        Organization *
+                      </label>
+                      <input
+                        type="text"
+                        id="organization"
+                        name="organization"
+                        required
+                        value={formData.organization}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                        placeholder="Hospital or organization name"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="inquiry" className="block text-sm font-medium text-[#001F5B] mb-2">
+                        Inquiry Type *
+                      </label>
+                      <select
+                        id="inquiry"
+                        name="inquiry"
+                        required
+                        value={formData.inquiry}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                      >
+                        <option value="">Select inquiry type</option>
+                        <option value="demo">Request a Demo</option>
+                        <option value="partnership">Partnership Inquiry</option>
+                        <option value="implementation">Implementation Support</option>
+                        <option value="training">Training & Education</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-[#001F5B] mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows={4}
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 resize-none"
+                        placeholder="Tell us about your needs..."
+                      ></textarea>
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <Send className="w-5 h-5" />
+                      <span>Send Message</span>
+                    </button>
+                    <p className="text-sm text-gray-500 text-center">
+                      We'll respond within 24 hours during business days
+                    </p>
+                  </div>
+                </form>
+              )}
             </div>
 
-            <div className="bg-white rounded-2xl p-6 text-gray-800">
-              <h3 className="text-lg font-semibold text-[#001F5B] mb-4 text-center">Book Your Demo</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-[#001F5B] mb-2">Preferred Date Range</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6]"
-                    placeholder="Next week, specific dates, etc."
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-[#001F5B] mb-2">Time Preference</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6]">
-                    <option>Morning (9 AM - 12 PM)</option>
-                    <option>Afternoon (12 PM - 5 PM)</option>
-                    <option>Flexible</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-[#001F5B] mb-2">Number of Attendees</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6]">
-                    <option>1-2 people</option>
-                    <option>3-5 people</option>
-                    <option>6+ people</option>
-                  </select>
-                </div>
-                <button className="w-full bg-gradient-to-r from-[#B22222] to-[#00CFE6] text-white py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2">
-                  <Calendar className="w-5 h-5" />
-                  <span>Schedule Demo</span>
-                </button>
+            {/* Map and Address */}
+            <div className="space-y-6">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.430289104064!2d77.54426197507706!3d13.008248287310485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAwJzI5LjciTiA3N8KwMzInNDguNiJF!5e0!3m2!1sen!2sin!4v1764398866985!5m2!1sen!2sin"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Telepulse Headquarters Location"
+                ></iframe>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Office Map */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Visit Our Headquarters</h2>
-            <p className="text-base text-gray-600 max-w-3xl mx-auto">
-              Located in the heart of the medical district with easy access to major hospitals and research institutions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-            <div className="lg:col-span-2">
-              <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-[#B22222] mx-auto mb-3" />
-                  <p className="text-gray-600">Interactive Map</p>
-                  <p className="text-gray-500 text-sm">123 Medical Innovation Drive<br />Healthcare City, HC 12345</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="bg-gray-50 rounded-xl p-4">
-                <h3 className="text-base font-semibold text-[#001F5B] mb-3">Directions</h3>
-                <div className="space-y-2 text-gray-600 text-sm">
-                  <p><strong>From Airport:</strong> 25 minutes via Highway 101</p>
-                  <p><strong>Public Transit:</strong> Metro Line A, Medical Center stop</p>
-                  <p><strong>Parking:</strong> Visitor parking available in Garage B</p>
-                </div>
-              </div>
-              
-              <div className="bg-gray-50 rounded-xl p-4">
-                <h3 className="text-base font-semibold text-[#001F5B] mb-3">Office Hours</h3>
-                <div className="space-y-1 text-gray-600 text-sm">
-                  <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
-                  <p><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
-                  <p><strong>Sunday:</strong> Closed</p>
-                  <p className="text-xs text-gray-500 mt-2">Emergency support available 24/7</p>
+              <div className="bg-white rounded-2xl shadow-xl p-6">
+                <h3 className="text-xl font-semibold text-[#001F5B] mb-4">Visit Our Office</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-5 h-5 text-[#B22222] mt-1 flex-shrink-0" />
+                    <div className="text-gray-600 text-sm">
+                      <p className="font-medium text-[#001F5B] mb-1">Telepulse</p>
+                      <p>AKSHAYA, 22 (270)<br />4th Main Road<br />Mahalakshmi Layout<br />Bangalore 560086<br />India</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Mail className="w-5 h-5 text-[#B22222] mt-1 flex-shrink-0" />
+                    <div className="text-gray-600 text-sm">
+                      <p className="font-medium text-[#001F5B] mb-1">Email</p>
+                      <p>info@telepulse.in</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Phone className="w-5 h-5 text-[#B22222] mt-1 flex-shrink-0" />
+                    <div className="text-gray-600 text-sm">
+                      <p className="font-medium text-[#001F5B] mb-1">Phone</p>
+                      <p>+1 (555) 123-4567</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
