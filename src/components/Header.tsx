@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                     </Link>
                     
                     {isSolutionsOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 py-4 z-50">
+                      <div className="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 py-4 z-50">
                         <Link
                           to={item.path}
                           className="block px-6 py-3 text-sm font-medium text-gray-700 hover:text-[#B22222] hover:bg-gray-50 transition-colors duration-200"
