@@ -26,7 +26,6 @@ import {
   CheckCircle,
   Video,
   Database,
-  Shield
 } from 'lucide-react';
 
 // const CountUp: React.FC<{ end: number; duration?: number; suffix?: string }> = ({ 
@@ -70,34 +69,32 @@ const Home: React.FC = () => {
   // ];
 
   const solutions = [
-
-        {
+    {
       icon: Stethoscope,
       title: 'Pediatric Tele-ICU',
       description: 'Comprehensive critical care with real-time intervention',
-      // metrics: '35% outcome improvement',
+      image: '/assets/Our Solutions-page/Pediatric-Tele-ICU.png',
       path: '/picu'
     },
     {
       icon: Heart,
       title: 'NICU Tele-care',
       description: 'Specialized neonatal monitoring with 24/7 expert consultation',
-      // metrics: '40% mortality reduction',
+      image: '/assets/Our Solutions-page/NICU-Tele-care.png',
       path: '/nicu'
     },
-
     {
       icon: GraduationCap,
       title: 'Tele-Education',
       description: 'Professional development and certification programs',
-      // metrics: '95% completion rate',
+      image: '/assets/Our Solutions-page/Tele-Education.png',
       path: '/education'
     },
     {
       icon: Search,
       title: 'Research & Innovation',
       description: 'Evidence-based protocols and clinical studies',
-      // metrics: '50+ published studies',
+      image: '/assets/Our Solutions-page/Research & Innovation.png',
       path: '/research'
     },
   ];
@@ -289,24 +286,14 @@ const Home: React.FC = () => {
                 {/* Main Image Container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Pediatric Healthcare"
+                    src="random/Our-Vision.png"
+                    alt="Revolutionize Pediatric Care"
                     className="w-full h-[500px] object-cover"
                   />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#001F5B]/40 via-transparent to-[#00CFE6]/20"></div>
 
-                  {/* Floating Stats Cards */}
-                  <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-3">
-                    <div className="bg-white/95 backdrop-blur-lg rounded-xl p-4 shadow-xl">
-                      <div className="text-2xl font-bold text-[#B22222]">15K+</div>
-                      <div className="text-xs text-gray-600 font-medium">Lives Saved</div>
-                    </div>
-                    <div className="bg-white/95 backdrop-blur-lg rounded-xl p-4 shadow-xl">
-                      <div className="text-2xl font-bold text-[#001F5B]">250+</div>
-                      <div className="text-xs text-gray-600 font-medium">Partner Hospitals</div>
-                    </div>
-                  </div>
+               
                 </div>
               </div>
             </div>
@@ -352,27 +339,41 @@ const Home: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <Link
                 key={index}
                 to={solution.path}
-                className="group bg-white rounded-xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-[#00CFE6]/30"
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#00CFE6]/50"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-[#B22222] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <solution.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-base font-medium text-[#001F5B] mb-2 group-hover:text-[#B22222] transition-colors duration-200">
-                      {solution.title}
-                    </h3>
-                   
-                    <div className="flex items-center justify-between">
-                       <p className="text-gray-600 mb-2 text-sm leading-relaxed">{solution.description}</p>
-                      {/* <span className="text-[#00CFE6] font-medium text-sm">{solution.metrics}</span> */}
-                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#B22222] group-hover:translate-x-1 transition-all duration-200" />
+                {/* Image Section */}
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={solution.image}
+                    alt={solution.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#001F5B]/60 via-transparent to-transparent"></div>
+
+                  {/* Icon Badge */}
+                  <div className="absolute top-4 left-4">
+                    <div className="w-14 h-14 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg">
+                      <solution.icon className="w-7 h-7 text-[#B22222]" />
                     </div>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#001F5B] mb-3 group-hover:text-[#B22222] transition-colors duration-200">
+                    {solution.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {solution.description}
+                  </p>
+                  <div className="flex items-center text-[#00CFE6] font-medium group-hover:gap-2 transition-all duration-200">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
                 </div>
               </Link>

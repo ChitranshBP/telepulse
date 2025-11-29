@@ -44,32 +44,32 @@ const ResearchInnovation: React.FC = () => {
     { value: '100K+', label: 'Patient Records', icon: BarChart3 }
   ];
 
-  const researchAreas = [
-    {
-      title: 'Telemedicine Effectiveness',
-      description: 'Comprehensive studies on clinical outcomes, cost-effectiveness, and quality improvements through telemedicine implementation.',
-      publications: 8,
-      status: 'Ongoing'
-    },
-    {
-      title: 'AI in Pediatric Care',
-      description: 'Research on artificial intelligence applications for predictive analytics, early warning systems, and clinical decision support.',
-      publications: 6,
-      status: 'Active'
-    },
-    {
-      title: 'Quality Improvement',
-      description: 'Studies on quality metrics, patient safety improvements, and standardization of care protocols in telemedicine settings.',
-      publications: 5,
-      status: 'Ongoing'
-    },
-    {
-      title: 'Healthcare Access',
-      description: 'Research on improving healthcare access in rural and underserved communities through telemedicine solutions.',
-      publications: 6,
-      status: 'Active'
-    }
-  ];
+  // const researchAreas = [
+  //   {
+  //     title: 'Telemedicine Effectiveness',
+  //     description: 'Comprehensive studies on clinical outcomes, cost-effectiveness, and quality improvements through telemedicine implementation.',
+  //     publications: 8,
+  //     status: 'Ongoing'
+  //   },
+  //   {
+  //     title: 'AI in Pediatric Care',
+  //     description: 'Research on artificial intelligence applications for predictive analytics, early warning systems, and clinical decision support.',
+  //     publications: 6,
+  //     status: 'Active'
+  //   },
+  //   {
+  //     title: 'Quality Improvement',
+  //     description: 'Studies on quality metrics, patient safety improvements, and standardization of care protocols in telemedicine settings.',
+  //     publications: 5,
+  //     status: 'Ongoing'
+  //   },
+  //   {
+  //     title: 'Healthcare Access',
+  //     description: 'Research on improving healthcare access in rural and underserved communities through telemedicine solutions.',
+  //     publications: 6,
+  //     status: 'Active'
+  //   }
+  // ];
 
   return (
     <div className="pt-20">
@@ -151,7 +151,7 @@ const ResearchInnovation: React.FC = () => {
       </section>
 
       {/* Research Areas */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Research Focus Areas</h2>
@@ -188,7 +188,7 @@ const ResearchInnovation: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits */}
       <section className="py-12 bg-gray-50">

@@ -98,8 +98,8 @@ const Solutions: React.FC = () => {
       <section className="relative py-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Medical Solutions"
+            src="/assets/Our Solutions-page/Our-Solutions-banner.png"
+            alt="Our Medical Solutions"
             className="hero-bg-image"
           />
         </div>

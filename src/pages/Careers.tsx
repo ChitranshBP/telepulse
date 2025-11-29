@@ -148,8 +148,8 @@ const Careers: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Healthcare Careers"
+            src="/assets/Join Our Mission/Join-Our-Mission.png"
+            alt="Join Our Mission - Healthcare Careers"
             className="hero-bg-image"
           />
         </div>
@@ -223,7 +223,7 @@ const Careers: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="assets/Join Our Mission/Why Join Telepulse.png"
                 alt="Team Collaboration"
                 className="feature-image shadow-xl"
               />

@@ -37,39 +37,39 @@ const TeleEducation: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { value: '95%', label: 'Completion Rate', icon: Award },
-    { value: '80%', label: 'Competency Improvement', icon: BookOpen },
-    { value: '12', label: 'Countries Served', icon: Users },
-    { value: '500+', label: 'Healthcare Professionals', icon: GraduationCap }
-  ];
+  // const stats = [
+  //   { value: '95%', label: 'Completion Rate', icon: Award },
+  //   { value: '80%', label: 'Competency Improvement', icon: BookOpen },
+  //   { value: '12', label: 'Countries Served', icon: Users },
+  //   { value: '500+', label: 'Healthcare Professionals', icon: GraduationCap }
+  // ];
 
-  const programs = [
-    {
-      title: 'Neonatal Critical Care Certification',
-      duration: '40 hours',
-      credits: '40 CME',
-      description: 'Comprehensive program covering advanced neonatal care, ventilation strategies, and emergency interventions.'
-    },
-    {
-      title: 'Pediatric Emergency Medicine',
-      duration: '30 hours',
-      credits: '30 CME',
-      description: 'Essential skills for pediatric emergency situations, including trauma care and critical procedures.'
-    },
-    {
-      title: 'Telemedicine Best Practices',
-      duration: '20 hours',
-      credits: '20 CME',
-      description: 'Training on effective telemedicine delivery, technology use, and patient communication strategies.'
-    },
-    {
-      title: 'Quality Improvement in Pediatric Care',
-      duration: '25 hours',
-      credits: '25 CME',
-      description: 'Methods for implementing quality improvement initiatives and measuring outcomes in pediatric settings.'
-    }
-  ];
+  // const programs = [
+  //   {
+  //     title: 'Neonatal Critical Care Certification',
+  //     duration: '40 hours',
+  //     credits: '40 CME',
+  //     description: 'Comprehensive program covering advanced neonatal care, ventilation strategies, and emergency interventions.'
+  //   },
+  //   {
+  //     title: 'Pediatric Emergency Medicine',
+  //     duration: '30 hours',
+  //     credits: '30 CME',
+  //     description: 'Essential skills for pediatric emergency situations, including trauma care and critical procedures.'
+  //   },
+  //   {
+  //     title: 'Telemedicine Best Practices',
+  //     duration: '20 hours',
+  //     credits: '20 CME',
+  //     description: 'Training on effective telemedicine delivery, technology use, and patient communication strategies.'
+  //   },
+  //   {
+  //     title: 'Quality Improvement in Pediatric Care',
+  //     duration: '25 hours',
+  //     credits: '25 CME',
+  //     description: 'Methods for implementing quality improvement initiatives and measuring outcomes in pediatric settings.'
+  //   }
+  // ];
 
   return (
     <div className="pt-20">
@@ -77,7 +77,7 @@ const TeleEducation: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="assets/Our Solutions-page/Our-Solutions-banner.png"
             alt="Medical Education"
             className="hero-bg-image"
           />
@@ -117,7 +117,7 @@ const TeleEducation: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="assets/Our Solutions-page/Tele-Education.png"
                 alt="Medical Education Technology"
                 className="feature-image shadow-2xl"
               />
@@ -151,7 +151,7 @@ const TeleEducation: React.FC = () => {
       </section>
 
       {/* Training Programs */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Training Programs</h2>
@@ -188,7 +188,7 @@ const TeleEducation: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits */}
       <section className="py-12 bg-gray-50">
@@ -212,7 +212,7 @@ const TeleEducation: React.FC = () => {
       </section>
 
       {/* Statistics */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      {/* <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Educational Impact</h2>
@@ -233,10 +233,10 @@ const TeleEducation: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Study */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 lg:p-8 shadow-xl">
             <div className="text-center mb-8">
@@ -293,7 +293,7 @@ const TeleEducation: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-12 bg-[#B22222] text-white">

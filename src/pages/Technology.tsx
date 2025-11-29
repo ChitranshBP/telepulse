@@ -78,8 +78,8 @@ const Technology: React.FC = () => {
       <section className="relative py-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Medical Technology"
+            src="/assets/Advanced Technology/Advanced-Technology.png"
+            alt="Advanced Medical Technology"
             className="hero-bg-image"
           />
         </div>
@@ -132,7 +132,7 @@ const Technology: React.FC = () => {
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="assets/Advanced Technology/Philips-Healthcare-Integration.png"
                 alt="Philips Integration"
                 className="feature-image shadow-xl"
               />
@@ -296,31 +296,25 @@ const Technology: React.FC = () => {
           </div>
 
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 lg:p-8 shadow-xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-items-center">
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#B22222] rounded-xl flex items-center justify-center mb-3">
                   <Monitor className="w-10 h-10 text-white" />
                 </div>
                 <h4 className="font-medium text-[#001F5B] text-sm">Philips IntelliVue</h4>
               </div>
-              {/* <div className="text-center">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#6366F1] to-[#4F46E5] rounded-xl flex items-center justify-center mb-3">
+                  <Database className="w-10 h-10 text-white" />
+                </div>
+                <h4 className="font-medium text-[#001F5B] text-sm">Aishan Technologies</h4>
+              </div>
+              <div className="text-center">
                 <div className="w-16 h-16 bg-[#001F5B] rounded-xl flex items-center justify-center mb-3">
-                  <Activity className="w-10 h-10 text-white" />
+                  <Video className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="font-medium text-[#001F5B] text-sm">Epic EHR</h4>
-              </div> */}
-              {/* <div className="text-center">
-                <div className="w-16 h-16 bg-[#B22222] rounded-xl flex items-center justify-center mb-3">
-                  <BarChart3 className="w-10 h-10 text-white" />
-                </div>
-                <h4 className="font-medium text-[#001F5B] text-sm">Cerner PowerChart</h4>
-              </div> */}
-              {/* <div className="text-center">
-                <div className="w-16 h-16 bg-[#001F5B] rounded-xl flex items-center justify-center mb-3">
-                  <Workflow className="w-10 h-10 text-white" />
-                </div>
-                <h4 className="font-medium text-[#001F5B] text-sm">MEDITECH</h4>
-              </div> */}
+                <h4 className="font-medium text-[#001F5B] text-sm">RTWO</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -390,8 +384,8 @@ const Technology: React.FC = () => {
                   {/* Hero Image */}
                   <div className="relative h-64 lg:h-80">
                     <img
-                      src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="Video Streaming Technology"
+                      src="/assets/Advanced Technology/Technology-Partners.png"
+                      alt="RTWO Video Streaming Technology"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#001F5B]/60"></div>
@@ -477,8 +471,8 @@ const Technology: React.FC = () => {
                   {/* Hero Image */}
                   <div className="relative h-64 lg:h-80">
                     <img
-                      src="https://images.pexels.com/photos/7089020/pexels-photo-7089020.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="Medical Data Integration"
+                      src="/assets/Advanced Technology/Aishan-Technologies.png"
+                      alt="Aishan Technologies Medical Data Integration"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#6366F1]/60"></div>
@@ -564,8 +558,8 @@ const Technology: React.FC = () => {
                   {/* Hero Image */}
                   <div className="relative h-64 lg:h-80">
                     <img
-                      src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="Medical Monitoring Equipment"
+                      src="/assets/Advanced Technology/Philips-IntelliVue.png"
+                      alt="Philips IntelliVue Medical Monitoring Equipment"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#B22222]/60"></div>

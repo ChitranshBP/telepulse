@@ -50,8 +50,8 @@ const NICUTeleCare: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/433267/pexels-photo-433267.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="NICU Care"
+            src="/assets/NICU Tele-care/NICU-Tele-care.png"
+            alt="NICU Tele-care"
             className="hero-bg-image"
           />
         </div>

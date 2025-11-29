@@ -89,8 +89,8 @@ const AboutUs: React.FC = () => {
       <section className="relative py-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/4386476/pexels-photo-4386476.jpeg?auto=compress&cs=tinysrgb&w=1600"
-            alt="Medical Team"
+            src="/assets/About-Telepulse-1.png"
+            alt="About Telepulse Medical Team"
             className="hero-bg-image"
           />
         </div>
@@ -131,11 +131,10 @@ const AboutUs: React.FC = () => {
             </div>
             <div className="relative flex items-center justify-center">
               <img
-                src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="random/Transform-Pediatric-critical-care.png"
                 alt="Healthcare Technology"
                 className="feature-image shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#001F5B]/20 to-transparent rounded-3xl"></div>
             </div>
           </div>
         </div>
