@@ -1,8 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Award, MapPin, Clock, ArrowRight, Building, Briefcase, GraduationCap, Coffee } from 'lucide-react';
+import { Heart, Users, Award, MapPin, Clock, ArrowRight, Building, Briefcase, GraduationCap, Coffee,Send, CheckCircle } from 'lucide-react';
 
 const Careers: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    position: '',
+    experience: '',
+    coverLetter: '',
+    resume: null as File | null
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        position: '',
+        experience: '',
+        coverLetter: '',
+        resume: null
+      });
+    }, 3000);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setFormData({
+        ...formData,
+        resume: e.target.files[0]
+      });
+    }
+  };
+
   const benefits = [
     {
       icon: Heart,
@@ -38,87 +84,48 @@ const Careers: React.FC = () => {
 
   const openRoles = [
     {
-      title: 'Senior Pediatric Telemedicine Physician',
-      department: 'Clinical',
-      location: 'Remote / Boston, MA',
+      title: 'HR Manager',
+      department: 'Human Resources',
+      location: 'Bangalore, India',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Lead clinical operations and provide expert consultation for our NICU and PICU telemedicine programs.',
+      description: 'An experienced HR Manager specializing in healthcare and telemedicine environments, responsible for building and sustaining high-performance teams at Tele Pulse Pediatrics. Skilled in talent acquisition, onboarding, performance management, staff training, compliance, and employee engagement. Plays a key role in aligning workforce strategies with organizational goals, fostering a positive workplace culture, and ensuring efficient HR operations to support high-quality pediatric healthcare delivery in a digital-first environment.',
       requirements: [
-        'Board certification in Pediatrics or Neonatology',
-        'Experience in critical care medicine',
-        'Telemedicine experience preferred',
-        'Strong communication and technology skills'
+        'Expertise in talent acquisition and onboarding',
+        'Experience in healthcare and telemedicine environments',
+        'Strong performance management and training skills',
+        'Knowledge of compliance and employee engagement',
+        'Ability to align workforce strategies with organizational goals'
       ]
     },
     {
-      title: 'Healthcare Software Engineer',
-      department: 'Engineering',
-      location: 'San Francisco, CA / Remote',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Develop and maintain HIPAA-compliant healthcare applications and integration systems.',
-      requirements: [
-        'BS/MS in Computer Science or related field',
-        'Experience with healthcare IT systems',
-        'Knowledge of HIPAA and healthcare regulations',
-        'Proficiency in modern web technologies'
-      ]
-    },
-    {
-      title: 'Clinical Implementation Specialist',
-      department: 'Operations',
-      location: 'Multiple locations',
-      type: 'Full-time',
-      experience: '2+ years',
-      description: 'Support hospital partners in implementing and optimizing telemedicine programs.',
-      requirements: [
-        'Clinical background (RN, RT, or similar)',
-        'Project management experience',
-        'Travel availability (50%)',
-        'Strong interpersonal and training skills'
-      ]
-    },
-    {
-      title: 'Data Scientist - Healthcare Analytics',
-      department: 'Technology',
-      location: 'Austin, TX / Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Develop machine learning models for predictive analytics in pediatric critical care.',
-      requirements: [
-        'PhD/MS in Data Science, Statistics, or related field',
-        'Experience with healthcare data',
-        'Machine learning and statistical modeling expertise',
-        'Python, R, and SQL proficiency'
-      ]
-    },
-    {
-      title: 'Partnership Development Manager',
-      department: 'Business Development',
-      location: 'Chicago, IL',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Build strategic partnerships with hospitals, health systems, and technology companies.',
-      requirements: [
-        'MBA or equivalent business experience',
-        'Healthcare industry background',
-        'Strong negotiation and relationship building skills',
-        'Experience with partnership agreements'
-      ]
-    },
-    {
-      title: 'Quality Assurance Specialist',
-      department: 'Clinical Quality',
+      title: 'Virtual Nurse Assistant',
+      department: 'Clinical Care',
       location: 'Remote',
       type: 'Full-time',
       experience: '2+ years',
-      description: 'Ensure clinical quality standards and regulatory compliance across all telemedicine programs.',
+      description: 'A dedicated Virtual Nurse Assistant supporting remote pediatric care delivery through Telepulse Paediatrics, with strong expertise in patient triage, virtual consultations support, care coordination, and family education. Skilled in monitoring patient symptoms, documenting clinical data, assisting pediatric specialists during teleconsultations, and ensuring continuity of care through digital platforms. Committed to delivering compassionate, timely, and high-quality support to children and their families in a virtual healthcare environment.',
       requirements: [
-        'Clinical background with quality improvement experience',
-        'Knowledge of healthcare regulations and accreditation',
-        'Data analysis and reporting skills',
-        'Attention to detail and process improvement mindset'
+        'Experience in patient triage and virtual consultations',
+        'Strong care coordination and family education skills',
+        'Proficiency in monitoring patient symptoms and clinical documentation',
+        'Ability to assist pediatric specialists during teleconsultations',
+        'Commitment to compassionate and high-quality virtual care'
+      ]
+    },
+    {
+      title: 'Biomedical Engineer',
+      department: 'Technology & Infrastructure',
+      location: 'Bangalore, India',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'A skilled Biomedical Engineer supporting the technological backbone of Telepulse Paediatrics, specializing in the maintenance, calibration, and optimization of medical and telehealth equipment. Experienced in managing remote monitoring systems, medical devices, and digital healthcare infrastructure to ensure seamless and reliable virtual pediatric care. Plays a vital role in equipment safety, troubleshooting, compliance, and innovation, enabling high-quality, technology-driven healthcare delivery for pediatric patients.',
+      requirements: [
+        'Expertise in maintenance and calibration of medical equipment',
+        'Experience with remote monitoring systems and telehealth devices',
+        'Strong troubleshooting and equipment safety knowledge',
+        'Understanding of healthcare compliance and regulations',
+        'Ability to support digital healthcare infrastructure'
       ]
     }
   ];
@@ -311,26 +318,23 @@ const Careers: React.FC = () => {
                   <div className="lg:col-span-1">
                     <h4 className="font-medium text-[#001F5B] mb-3">Key Requirements:</h4>
                     <ul className="space-y-2 text-sm text-gray-600">
-                      {role.requirements.slice(0, 3).map((req, reqIndex) => (
+                      {role.requirements.map((req, reqIndex) => (
                         <li key={reqIndex} className="flex items-start space-x-2">
                           <div className="w-1.5 h-1.5 bg-[#B22222] rounded-full mt-2 flex-shrink-0"></div>
                           <span>{req}</span>
                         </li>
                       ))}
-                      {role.requirements.length > 3 && (
-                        <li className="text-[#00CFE6] text-sm">+{role.requirements.length - 3} more requirements</li>
-                      )}
                     </ul>
                   </div>
-                  
-                  <div className="lg:col-span-1 flex flex-col space-y-3">
-                    <button className="bg-[#B22222] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#001F5B] transition-colors duration-200 flex items-center justify-center space-x-2">
+
+                  <div className="lg:col-span-1 flex items-center">
+                    <a
+                      href="#application-form"
+                      className="w-full bg-[#B22222] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#001F5B] transition-colors duration-200 flex items-center justify-center space-x-2"
+                    >
                       <span>Apply Now</span>
                       <ArrowRight className="w-4 h-4" />
-                    </button>
-                    <button className="border border-gray-300 text-gray-700 px-6 py-2.5 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200">
-                      Learn More
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -339,9 +343,12 @@ const Careers: React.FC = () => {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">Don't see a role that fits? We're always looking for exceptional talent.</p>
-            <button className="bg-[#001F5B] text-white px-6 py-3 rounded-full font-medium hover:bg-[#B22222] transition-colors duration-200">
+            <a
+              href="#application-form"
+              className="inline-block bg-[#001F5B] text-white px-6 py-3 rounded-full font-medium hover:bg-[#B22222] transition-colors duration-200"
+            >
               Send Us Your Resume
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -393,28 +400,173 @@ const Careers: React.FC = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-12 bg-[#B22222] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Ready to Make an Impact?</h2>
-          <p className="text-base mb-6 max-w-3xl mx-auto">
-            Join our mission to revolutionize pediatric critical care and help save lives around the world. 
-            Your next career move could change everything.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-[#001F5B] px-6 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:text-white hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              Get in Touch
-            </Link>
-            <a
-              href="#open-positions"
-              className="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-[#001F5B] transition-all duration-300"
-            >
-              View All Positions
-            </a>
+      {/* Application Form */}
+      <section id="application-form" className="py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Apply for a Position</h2>
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
+              Submit your application and join our mission to revolutionize pediatric critical care
+            </p>
           </div>
+
+          {isSubmitted ? (
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#B22222] rounded-full flex items-center justify-center">
+                <CheckCircle className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-[#001F5B] mb-3">Application Submitted Successfully!</h3>
+              <p className="text-base text-gray-600 mb-6">
+                Thank you for your interest in joining Telepulse. Our HR team will review your application and get back to you within 5-7 business days.
+              </p>
+              <button
+                onClick={() => setIsSubmitted(false)}
+                className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                Submit Another Application
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-[#001F5B] mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-[#001F5B] mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-[#001F5B] mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                    placeholder="+91 XXXXX XXXXX"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="position" className="block text-sm font-medium text-[#001F5B] mb-2">
+                    Position Applied For *
+                  </label>
+                  <select
+                    id="position"
+                    name="position"
+                    required
+                    value={formData.position}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                  >
+                    <option value="">Select a position</option>
+                    <option value="hr-manager">HR Manager</option>
+                    <option value="virtual-nurse">Virtual Nurse Assistant</option>
+                    <option value="biomedical-engineer">Biomedical Engineer</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="experience" className="block text-sm font-medium text-[#001F5B] mb-2">
+                  Years of Experience *
+                </label>
+                <select
+                  id="experience"
+                  name="experience"
+                  required
+                  value={formData.experience}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                >
+                  <option value="">Select experience level</option>
+                  <option value="0-2">0-2 years</option>
+                  <option value="2-5">2-5 years</option>
+                  <option value="5-10">5-10 years</option>
+                  <option value="10+">10+ years</option>
+                </select>
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="resume" className="block text-sm font-medium text-[#001F5B] mb-2">
+                  Upload Resume/CV *
+                </label>
+                <div className="relative">
+                  <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    required
+                    onChange={handleFileChange}
+                    accept=".pdf,.doc,.docx"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#00CFE6] file:text-[#001F5B] hover:file:bg-[#001F5B] hover:file:text-white"
+                  />
+                </div>
+                <p className="text-xs text-gray-500 mt-2">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="coverLetter" className="block text-sm font-medium text-[#001F5B] mb-2">
+                  Cover Letter *
+                </label>
+                <textarea
+                  id="coverLetter"
+                  name="coverLetter"
+                  required
+                  rows={6}
+                  value={formData.coverLetter}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 resize-none"
+                  placeholder="Tell us why you're interested in this position and what makes you a great fit for Telepulse..."
+                ></textarea>
+              </div>
+
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto"
+                >
+                  <Send className="w-5 h-5" />
+                  <span>Submit Application</span>
+                </button>
+                <p className="text-sm text-gray-500 mt-4">
+                  We'll review your application and respond within 5-7 business days
+                </p>
+              </div>
+            </form>
+          )}
         </div>
       </section>
     </div>

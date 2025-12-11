@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import {  Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -47,15 +47,26 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#00CFE6]" />
-                <span className="text-gray-300">info@telepulse.com</span>
+                <a href="mailto:info@telepulse.in" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
+                  info@telepulse.in
+                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#00CFE6]" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <a href="tel:+919108080000" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
+                  +91-9108080000
+                </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-[#00CFE6] mt-1" />
-                <span className="text-gray-300">AKSHAYA, 22 (270), 4th Main Road<br />Mahalakshmi Layout, Bangalore 560086<br />India</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=13.008248287310485,77.54426197507706"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200"
+                >
+                  AKSHAYA, 22 (270), 4th Main Road<br />Mahalakshmi Layout, Bangalore 560086<br />India
+                </a>
               </li>
             </ul>
           </div>
@@ -93,7 +104,7 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex items-center space-x-6">
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -106,7 +117,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-300 hover:text-[#00CFE6] transition-colors duration-200">
                 <Youtube className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
             <p className="text-gray-400 text-sm">
               © 2025 Telepulse. All rights reserved.
             </p>

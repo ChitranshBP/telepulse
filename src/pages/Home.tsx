@@ -5,7 +5,6 @@ import {
   Users,
   Monitor,
   // Shield,
-  Award,
   ArrowRight,
   Play,
   // ChevronLeft,
@@ -214,10 +213,10 @@ const Home: React.FC = () => {
               {/* Left Column - Content */}
               <div className="space-y-6 text-center lg:text-left">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
                   <div className="w-2 h-2 bg-[#00CFE6] rounded-full animate-pulse"></div>
                   <span className="text-white/90 text-sm font-medium">Trusted by 250+ Healthcare Institutions</span>
-                </div>
+                </div> */}
 
                 {/* Main Heading */}
                 <div className="space-y-4">
@@ -492,7 +491,7 @@ const Home: React.FC = () => {
             <div className="relative flex items-center justify-center">
   <div className=" rounded-2xl p-4 md:p-8 text-white overflow-hidden">
     <img
-      src="/images/timeline-graphic.png"
+      src="assets/Advanced Technology/Technology-Partners.png"
       alt="Implementation Timeline"
       className="w-full h-auto rounded-xl object-cover"
     />
@@ -602,37 +601,12 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
             <div className="relative">
               <div className="absolute -inset-3 bg-gradient-to-r from-[#00CFE6]/20 to-[#B22222]/20 rounded-2xl blur-xl"></div>
-              <div className="relative bg-white/80 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-xl">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-gradient-to-br from-[#001F5B]/5 to-[#B22222]/5 rounded-xl">
-                    <div className="w-12 h-12 mx-auto mb-3 bg-[#001F5B] rounded-xl flex items-center justify-center">
-                      <Heart className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-[#001F5B] mb-1">24/7</div>
-                    <div className="text-sm text-gray-600">Expert Coverage</div>
-                  </div>
-                  <div className="text-center p-4 bg-gradient-to-br from-[#B22222]/5 to-[#00CFE6]/5 rounded-xl">
-                    <div className="w-12 h-12 mx-auto mb-3 bg-[#B22222] rounded-xl flex items-center justify-center">
-                      <Users className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-[#001F5B] mb-1">250+</div>
-                    <div className="text-sm text-gray-600">Partner Hospitals</div>
-                  </div>
-                  <div className="text-center p-4 bg-gradient-to-br from-[#00CFE6]/5 to-[#001F5B]/5 rounded-xl">
-                    <div className="w-12 h-12 mx-auto mb-3 bg-[#00CFE6] rounded-xl flex items-center justify-center">
-                      <Globe className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-[#001F5B] mb-1">25+</div>
-                    <div className="text-sm text-gray-600">Countries</div>
-                  </div>
-                  <div className="text-center p-4 bg-gradient-to-br from-[#001F5B]/5 to-[#00CFE6]/5 rounded-xl">
-                    <div className="w-12 h-12 mx-auto mb-3 bg-[#001F5B] rounded-xl flex items-center justify-center">
-                      <Award className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-xl font-semibold text-[#001F5B] mb-1">99.9%</div>
-                    <div className="text-sm text-gray-600">Uptime</div>
-                  </div>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="random/stats-replacer.jpg"
+                  alt="What We Do"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 

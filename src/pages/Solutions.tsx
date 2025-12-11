@@ -11,7 +11,7 @@ const Solutions: React.FC = () => {
       title: 'Pediatric Tele-ICU',
       subtitle: 'Comprehensive Critical Care',
       description: 'Real-time monitoring and intervention for pediatric patients in intensive care units across all age groups.',
-      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'random/NICU-Tele-care.png',
       problem: 'Shortage of pediatric intensivists and uneven distribution of expertise leads to care gaps.',
       model: 'Continuous remote monitoring with immediate intervention capabilities and collaborative care planning.',
       benefits: [
@@ -32,7 +32,7 @@ const Solutions: React.FC = () => {
       title: 'NICU Tele-care',
       subtitle: 'Specialized Neonatal Intensive Care',
       description: 'Advanced telemedicine solutions specifically designed for the unique challenges of neonatal critical care.',
-      image: 'https://images.pexels.com/photos/433267/pexels-photo-433267.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'assets/Our Solutions-page/NICU Tele-care.png',
       problem: 'Many hospitals lack specialized neonatal expertise, leading to suboptimal outcomes for critically ill newborns.',
       model: '24/7 remote monitoring and consultation with board-certified neonatologists and NICU specialists.',
       benefits: [
@@ -54,7 +54,7 @@ const Solutions: React.FC = () => {
       title: 'Tele-Education',
       subtitle: 'Professional Development & Training',
       description: 'Comprehensive education and training programs for healthcare professionals in pediatric critical care.',
-      image: 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'assets/Our Solutions-page/Research & Innovation-The Problem.png',
       problem: 'Limited access to specialized pediatric training programs and continuing education opportunities.',
       model: 'Interactive online learning platform with accredited courses, simulation training, and mentorship programs.',
       benefits: [
@@ -75,7 +75,7 @@ const Solutions: React.FC = () => {
       title: 'Research & Innovation',
       subtitle: 'Evidence-Based Advancement',
       description: 'Cutting-edge research initiatives driving innovation in pediatric telemedicine and clinical outcomes.',
-      image: 'https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'assets/Our Solutions-page/Research & Innovation.png',
       problem: 'Limited research data on telemedicine effectiveness in pediatric critical care settings.',
       model: 'Collaborative research network conducting multi-center studies on telemedicine outcomes and best practices.',
       benefits: [

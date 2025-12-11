@@ -61,9 +61,7 @@ const Contact: React.FC = () => {
               <p className="text-gray-600 mb-3 text-sm">Speak with our team directly</p>
               <div className="space-y-2">
                 <p className="font-medium text-[#001F5B] text-sm">Sales & Partnerships</p>
-                <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
-                {/* <p className="font-medium text-[#001F5B] mt-3 text-sm">Technical Support</p>
-                <p className="text-gray-600 text-sm">+1 (555) 234-5678</p> */}
+                <a href="tel:+919108080000" className="text-gray-600 text-sm hover:text-[#B22222] transition-colors duration-200 block">+91-9108080000</a>
               </div>
             </div>
             
@@ -75,9 +73,7 @@ const Contact: React.FC = () => {
               <p className="text-gray-600 mb-3 text-sm">Send us a message anytime</p>
               <div className="space-y-2">
                 <p className="font-medium text-[#001F5B] text-sm">For Inquiries</p>
-                <p className="text-gray-600 text-sm">info@telepulse.in</p>
-                {/* <p className="font-medium text-[#001F5B] mt-3 text-sm">Partnership Opportunities</p> */}
-                {/* <p className="text-gray-600 text-sm">partnerships@telepulse.com</p> */}
+                <a href="mailto:info@telepulse.in" className="text-gray-600 text-sm hover:text-[#B22222] transition-colors duration-200 block">info@telepulse.in</a>
               </div>
             </div>
             
@@ -89,7 +85,14 @@ const Contact: React.FC = () => {
               <p className="text-gray-600 mb-3 text-sm">Visit us in person</p>
               <div className="space-y-2">
                 <p className="font-medium text-[#001F5B] text-sm">Telepulse</p>
-                <p className="text-gray-600 text-sm">AKSHAYA, 22 (270), 4th Main Road<br />Mahalakshmi Layout<br />Bangalore 560086, India</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=13.008248287310485,77.54426197507706"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 text-sm hover:text-[#B22222] transition-colors duration-200 block"
+                >
+                  AKSHAYA, 22 (270), 4th Main Road<br />Mahalakshmi Layout<br />Bangalore 560086, India
+                </a>
               </div>
             </div>
           </div>
@@ -268,21 +271,32 @@ const Contact: React.FC = () => {
                     <MapPin className="w-5 h-5 text-[#B22222] mt-1 flex-shrink-0" />
                     <div className="text-gray-600 text-sm">
                       <p className="font-medium text-[#001F5B] mb-1">Telepulse</p>
-                      <p>AKSHAYA, 22 (270)<br />4th Main Road<br />Mahalakshmi Layout<br />Bangalore 560086<br />India</p>
+                      <a
+                        href="https://www.google.com/maps/search/?api=1&query=13.008248287310485,77.54426197507706"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#B22222] transition-colors duration-200 block"
+                      >
+                        AKSHAYA, 22 (270)<br />4th Main Road<br />Mahalakshmi Layout<br />Bangalore 560086<br />India
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Mail className="w-5 h-5 text-[#B22222] mt-1 flex-shrink-0" />
                     <div className="text-gray-600 text-sm">
                       <p className="font-medium text-[#001F5B] mb-1">Email</p>
-                      <p>info@telepulse.in</p>
+                      <a href="mailto:info@telepulse.in" className="hover:text-[#B22222] transition-colors duration-200 block">
+                        info@telepulse.in
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Phone className="w-5 h-5 text-[#B22222] mt-1 flex-shrink-0" />
                     <div className="text-gray-600 text-sm">
                       <p className="font-medium text-[#001F5B] mb-1">Phone</p>
-                      <p>+1 (555) 123-4567</p>
+                      <a href="tel:+919108080000" className="hover:text-[#B22222] transition-colors duration-200 block">
+                        +91-9108080000
+                      </a>
                     </div>
                   </div>
                 </div>

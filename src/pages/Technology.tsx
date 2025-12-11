@@ -259,7 +259,7 @@ const Technology: React.FC = () => {
             </div>
             <div className="relative flex items-center justify-center">
               <img
-                src="https://images.pexels.com/photos/4386410/pexels-photo-4386410.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="random\hippa.jpg"
                 alt="Security Technology"
                 className="feature-image shadow-xl"
               />

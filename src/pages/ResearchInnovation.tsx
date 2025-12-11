@@ -37,12 +37,12 @@ const ResearchInnovation: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { value: '50+', label: 'Research Studies', icon: Search },
-    { value: '25', label: 'Publications', icon: Award },
-    { value: '200+', label: 'Participating Sites', icon: Users },
-    { value: '100K+', label: 'Patient Records', icon: BarChart3 }
-  ];
+  // const stats = [
+  //   { value: '50+', label: 'Research Studies', icon: Search },
+  //   { value: '25', label: 'Publications', icon: Award },
+  //   { value: '200+', label: 'Participating Sites', icon: Users },
+  //   { value: '100K+', label: 'Patient Records', icon: BarChart3 }
+  // ];
 
   // const researchAreas = [
   //   {
@@ -212,7 +212,7 @@ const ResearchInnovation: React.FC = () => {
       </section>
 
       {/* Statistics */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      {/* <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Research Portfolio</h2>
@@ -233,10 +233,10 @@ const ResearchInnovation: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Study */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 lg:p-8 shadow-xl">
             <div className="text-center mb-8">
@@ -293,7 +293,7 @@ const ResearchInnovation: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-12 bg-[#B22222] text-white">

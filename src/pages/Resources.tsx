@@ -1,125 +1,128 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BookOpen, Download, Video, Calendar, Search, ArrowRight, Users, Clock } from 'lucide-react';
+import { BookOpen, Download, Video } from 'lucide-react';
 
 const Resources: React.FC = () => {
-  const blogPosts = [
-    {
-      title: 'The Future of Pediatric Telemedicine: AI and Predictive Analytics',
-      excerpt: 'Exploring how artificial intelligence is revolutionizing early intervention and clinical decision-making in pediatric critical care.',
-      author: 'Dr. Sarah Chen',
-      date: '2025-01-15',
-      category: 'Innovation',
-      image: 'https://images.pexels.com/photos/4386433/pexels-photo-4386433.jpeg?auto=compress&cs=tinysrgb&w=400',
-      readTime: '5 min read'
-    },
-    {
-      title: 'Implementing NICU Tele-care: Best Practices and Lessons Learned',
-      excerpt: 'A comprehensive guide based on successful implementations across 50+ healthcare institutions worldwide.',
-      author: 'Dr. Michael Rodriguez',
-      date: '2025-01-12',
-      category: 'Implementation',
-      image: 'https://images.pexels.com/photos/433267/pexels-photo-433267.jpeg?auto=compress&cs=tinysrgb&w=400',
-      readTime: '8 min read'
-    },
-    {
-      title: 'Data Security in Healthcare: Protecting Patient Information in Telemedicine',
-      excerpt: 'Understanding HIPAA compliance, encryption, and security best practices for telemedicine platforms.',
-      author: 'Rebecca Martinez',
-      date: '2025-01-10',
-      category: 'Security',
-      image: 'https://images.pexels.com/photos/4386410/pexels-photo-4386410.jpeg?auto=compress&cs=tinysrgb&w=400',
-      readTime: '6 min read'
-    },
-    {
-      title: 'Global Impact: Rural Healthcare Access Through Telemedicine',
-      excerpt: 'Case studies demonstrating how telemedicine is bridging the healthcare gap in underserved communities.',
-      author: 'Dr. Lisa Thompson',
-      date: '2025-01-08',
-      category: 'Global Health',
-      image: 'https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=400',
-      readTime: '7 min read'
-    }
-  ];
+  // const blogPosts = [
+  //   {
+  //     title: 'The Future of Pediatric Telemedicine: AI and Predictive Analytics',
+  //     excerpt: 'Exploring how artificial intelligence is revolutionizing early intervention and clinical decision-making in pediatric critical care.',
+  //     author: 'Dr. Sarah Chen',
+  //     date: '2025-01-15',
+  //     category: 'Innovation',
+  //     image: 'https://images.pexels.com/photos/4386433/pexels-photo-4386433.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //     readTime: '5 min read'
+  //   },
+  //   {
+  //     title: 'Implementing NICU Tele-care: Best Practices and Lessons Learned',
+  //     excerpt: 'A comprehensive guide based on successful implementations across 50+ healthcare institutions worldwide.',
+  //     author: 'Dr. Michael Rodriguez',
+  //     date: '2025-01-12',
+  //     category: 'Implementation',
+  //     image: 'https://images.pexels.com/photos/433267/pexels-photo-433267.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //     readTime: '8 min read'
+  //   },
+  //   {
+  //     title: 'Data Security in Healthcare: Protecting Patient Information in Telemedicine',
+  //     excerpt: 'Understanding HIPAA compliance, encryption, and security best practices for telemedicine platforms.',
+  //     author: 'Rebecca Martinez',
+  //     date: '2025-01-10',
+  //     category: 'Security',
+  //     image: 'https://images.pexels.com/photos/4386410/pexels-photo-4386410.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //     readTime: '6 min read'
+  //   },
+  //   {
+  //     title: 'Global Impact: Rural Healthcare Access Through Telemedicine',
+  //     excerpt: 'Case studies demonstrating how telemedicine is bridging the healthcare gap in underserved communities.',
+  //     author: 'Dr. Lisa Thompson',
+  //     date: '2025-01-08',
+  //     category: 'Global Health',
+  //     image: 'https://images.pexels.com/photos/4386439/pexels-photo-4386439.jpeg?auto=compress&cs=tinysrgb&w=400',
+  //     readTime: '7 min read'
+  //   }
+  // ];
 
   const whitepapers = [
     {
-      title: 'Clinical Outcomes in Pediatric Tele-ICU: A Multi-Center Analysis',
-      description: 'Comprehensive analysis of patient outcomes across 200+ hospitals using Telepulse solutions.',
-      pages: 45,
-      downloadCount: '2.3k',
-      category: 'Clinical Research'
+      title: 'eICU - Electronic Intensive Care Unit',
+      description: 'Comprehensive guide to implementing electronic intensive care units for enhanced patient monitoring and care coordination in critical care settings.',
+      pages: 0,
+      downloadCount: '0',
+      category: 'Clinical Research',
+      file: '/assets/pdfs/eICU.pdf'
     },
     {
-      title: 'ROI Analysis: Economic Impact of Telemedicine in Critical Care',
-      description: 'Financial analysis demonstrating cost savings and improved efficiency through telemedicine implementation.',
-      pages: 32,
-      downloadCount: '1.8k',
-      category: 'Healthcare Economics'
+      title: 'Electronic Documentation',
+      description: 'Best practices and guidelines for implementing electronic documentation systems in healthcare facilities to improve efficiency and accuracy.',
+      pages: 0,
+      downloadCount: '0',
+      category: 'Technology',
+      file: '/assets/pdfs/Electronic documentation.pdf'
     },
     {
-      title: 'Regulatory Compliance Guide for Pediatric Telemedicine',
-      description: 'Complete guide to regulatory requirements, licensing, and compliance for telemedicine programs.',
-      pages: 58,
-      downloadCount: '3.1k',
-      category: 'Compliance'
+      title: 'Enhance Clinical Outcomes',
+      description: 'Strategies and evidence-based approaches for enhancing clinical outcomes through telemedicine and digital health solutions.',
+      pages: 0,
+      downloadCount: '0',
+      category: 'Clinical Research',
+      file: '/assets/pdfs/enhance clinical outcomes.pdf'
     },
     {
-      title: 'Technology Integration: EHR and Telemedicine Platform Optimization',
-      description: 'Best practices for integrating telemedicine solutions with existing hospital information systems.',
-      pages: 28,
-      downloadCount: '1.5k',
-      category: 'Technology'
+      title: 'Outstanding Performance',
+      description: 'Achieving outstanding performance in pediatric telemedicine through quality improvement initiatives and best practices.',
+      pages: 0,
+      downloadCount: '0',
+      category: 'Quality Improvement',
+      file: '/assets/pdfs/outstanding.pdf'
     }
   ];
 
-  const webinars = [
-    {
-      title: 'Advanced AI Applications in Pediatric Critical Care',
-      presenter: 'Dr. James Wilson, Chief Innovation Officer',
-      date: '2025-02-15',
-      time: '2:00 PM EST',
-      duration: '60 minutes',
-      type: 'upcoming',
-      description: 'Deep dive into machine learning algorithms for predictive analytics and clinical decision support.',
-      attendees: 500
-    },
-    {
-      title: 'Implementation Strategies for Multi-Site Telemedicine Programs',
-      presenter: 'Rebecca Martinez, CTO',
-      date: '2025-02-08',
-      time: '3:00 PM EST',
-      duration: '45 minutes',
-      type: 'upcoming',
-      description: 'Practical guidance for scaling telemedicine across multiple hospital locations and departments.',
-      attendees: 350
-    },
-    {
-      title: 'Quality Improvement Through Telemedicine Analytics',
-      presenter: 'Dr. Sarah Chen, CEO',
-      date: '2025-01-25',
-      time: 'On-Demand',
-      duration: '50 minutes',
-      type: 'recorded',
-      description: 'How data analytics can drive continuous quality improvement in pediatric critical care.',
-      views: '1.2k'
-    },
-    {
-      title: 'Nursing Excellence in Tele-ICU Environments',
-      presenter: 'Sarah Johnson, RN, MSN',
-      date: '2025-01-18',
-      time: 'On-Demand',
-      duration: '40 minutes',
-      type: 'recorded',
-      description: 'Best practices for nursing care coordination and patient management in telemedicine settings.',
-      views: '890'
-    }
-  ];
+  // const webinars = [
+  //   {
+  //     title: 'Advanced AI Applications in Pediatric Critical Care',
+  //     presenter: 'Dr. James Wilson, Chief Innovation Officer',
+  //     date: '2025-02-15',
+  //     time: '2:00 PM EST',
+  //     duration: '60 minutes',
+  //     type: 'upcoming',
+  //     description: 'Deep dive into machine learning algorithms for predictive analytics and clinical decision support.',
+  //     attendees: 500
+  //   },
+  //   {
+  //     title: 'Implementation Strategies for Multi-Site Telemedicine Programs',
+  //     presenter: 'Rebecca Martinez, CTO',
+  //     date: '2025-02-08',
+  //     time: '3:00 PM EST',
+  //     duration: '45 minutes',
+  //     type: 'upcoming',
+  //     description: 'Practical guidance for scaling telemedicine across multiple hospital locations and departments.',
+  //     attendees: 350
+  //   },
+  //   {
+  //     title: 'Quality Improvement Through Telemedicine Analytics',
+  //     presenter: 'Dr. Sarah Chen, CEO',
+  //     date: '2025-01-25',
+  //     time: 'On-Demand',
+  //     duration: '50 minutes',
+  //     type: 'recorded',
+  //     description: 'How data analytics can drive continuous quality improvement in pediatric critical care.',
+  //     views: '1.2k'
+  //   },
+  //   {
+  //     title: 'Nursing Excellence in Tele-ICU Environments',
+  //     presenter: 'Sarah Johnson, RN, MSN',
+  //     date: '2025-01-18',
+  //     time: 'On-Demand',
+  //     duration: '40 minutes',
+  //     type: 'recorded',
+  //     description: 'Best practices for nursing care coordination and patient management in telemedicine settings.',
+  //     views: '890'
+  //   }
+  // ];
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
+      <section className="relative py-6 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
             src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -139,7 +142,7 @@ const Resources: React.FC = () => {
       {/* Resource Categories */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-[#B22222] to-[#001F5B] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <BookOpen className="w-8 h-8 text-white" />
@@ -166,7 +169,7 @@ const Resources: React.FC = () => {
       </section>
 
       {/* Blog Feed */}
-      <section className="py-12 bg-gray-50">
+      {/* <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-10">
             <div>
@@ -236,10 +239,10 @@ const Resources: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Whitepapers */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold text-[#001F5B] mb-4">Research & Whitepapers</h2>
@@ -261,15 +264,23 @@ const Resources: React.FC = () => {
                     <Download className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex space-x-4 text-sm text-gray-500">
-                    <span>{paper.pages} pages</span>
-                    <span>{paper.downloadCount} downloads</span>
+                {paper.pages > 0 && (
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex space-x-4 text-sm text-gray-500">
+                      <span>{paper.pages} pages</span>
+                      <span>{paper.downloadCount} downloads</span>
+                    </div>
                   </div>
-                </div>
-                <button className="w-full bg-[#001F5B] text-white py-2.5 rounded-lg font-medium hover:bg-[#B22222] transition-colors duration-200">
+                )}
+                <a
+                  href={paper.file}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-[#001F5B] text-white py-2.5 rounded-lg font-medium hover:bg-[#B22222] transition-colors duration-200 text-center"
+                >
                   Download PDF
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -277,7 +288,7 @@ const Resources: React.FC = () => {
       </section>
 
       {/* Webinars */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      {/* <section className="py-12 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Educational Webinars</h2>
@@ -349,10 +360,10 @@ const Resources: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
-      <section className="py-12 bg-[#001F5B] text-white">
+      <section className="py-6 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Stay Connected</h2>
           <p className="text-base mb-6 max-w-3xl mx-auto">

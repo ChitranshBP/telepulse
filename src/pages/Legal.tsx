@@ -114,9 +114,9 @@ const Legal: React.FC = () => {
                 <h3 className="text-2xl font-bold text-[#001F5B] mb-4">5. Contact Information</h3>
                 <p className="text-gray-600 leading-relaxed">
                   For privacy-related questions or concerns, please contact our Privacy Officer:<br />
-                  <strong>Email:</strong> privacy@telepulse.com<br />
-                  <strong>Phone:</strong> +1 (555) 123-4567<br />
-                  <strong>Address:</strong> 123 Medical Innovation Drive, Healthcare City, HC 12345
+                  <strong>Email:</strong> <a href="mailto:info@telepulse.in" className="text-[#B22222] hover:text-[#00CFE6] transition-colors duration-200">info@telepulse.in</a><br />
+                  <strong>Phone:</strong> <a href="tel:+919108080000" className="text-[#B22222] hover:text-[#00CFE6] transition-colors duration-200">+91-9108080000</a><br />
+                  <strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=13.008248287310485,77.54426197507706" target="_blank" rel="noopener noreferrer" className="text-[#B22222] hover:text-[#00CFE6] transition-colors duration-200">AKSHAYA, 22 (270), 4th Main Road, Mahalakshmi Layout, Bangalore 560086, India</a>
                 </p>
               </div>
             </div>
@@ -250,7 +250,7 @@ const Legal: React.FC = () => {
                   <p className="text-red-700 font-semibold mb-2">IMPORTANT EMERGENCY NOTICE:</p>
                   <p className="text-red-600">
                     Our telemedicine platform is not intended for emergency medical situations. 
-                    In case of medical emergency, immediately call 911 (or local emergency services) 
+                    In case of medical emergency, immediately call local emergency services
                     or go to the nearest emergency room.
                   </p>
                 </div>
@@ -305,13 +305,13 @@ const Legal: React.FC = () => {
           </p>
           <div className="space-y-4">
             <p className="text-gray-300">
-              <strong>Legal Department:</strong> legal@telepulse.com
+              <strong>Email:</strong> <a href="mailto:info@telepulse.in" className="text-[#00CFE6] hover:text-white transition-colors duration-200">info@telepulse.in</a>
             </p>
             <p className="text-gray-300">
-              <strong>Privacy Officer:</strong> privacy@telepulse.com
+              <strong>Phone:</strong> <a href="tel:+919108080000" className="text-[#00CFE6] hover:text-white transition-colors duration-200">+91-9108080000</a>
             </p>
             <p className="text-gray-300">
-              <strong>Compliance Questions:</strong> compliance@telepulse.com
+              <strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=13.008248287310485,77.54426197507706" target="_blank" rel="noopener noreferrer" className="text-[#00CFE6] hover:text-white transition-colors duration-200">AKSHAYA, 22 (270), 4th Main Road, Mahalakshmi Layout, Bangalore 560086, India</a>
             </p>
           </div>
         </div>

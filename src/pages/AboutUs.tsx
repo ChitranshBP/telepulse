@@ -6,7 +6,7 @@ import {
    Eye,
   //  Award,
    Users,
-    ArrowRight,
+
     Video,
     Database,
     Monitor,
@@ -16,32 +16,18 @@ import {
 const AboutUs: React.FC = () => {
   const leadership = [
     {
-      name: 'Dr. Sarah Johnson',
-      title: 'Chief Executive Officer',
-      bio: 'Pediatric intensivist with 20+ years of experience. Former director of PICU at Johns Hopkins Children\'s Center.',
+      name: 'Dr. Sanjay D Swamy',
+      title: 'Founder - Telepulse',
+      bio: 'Pediatrician and Pediatric Intensivist with 18 years of experience as a specialist, dedicated to revolutionizing pediatric critical care through innovative telemedicine solutions.',
       image: 'https://images.pexels.com/photos/559827/pexels-photo-559827.jpeg?auto=compress&cs=tinysrgb&w=400',
-      education: 'MD - Harvard Medical School, MBA - Wharton'
+      education: 'Pediatrician and Pediatric Intensivist'
     },
     {
-      name: 'Dr. Michael Chen',
-      title: 'Chief Medical Officer',
-      bio: 'Leading neonatologist and researcher in telemedicine applications for critical care with 100+ publications.',
-      image: 'https://images.pexels.com/photos/582750/pexels-photo-582750.jpeg?auto=compress&cs=tinysrgb&w=400',
-      education: 'MD/PhD - Stanford University, Fellowship - Boston Children\'s'
-    },
-    {
-      name: 'Rebecca Martinez',
-      title: 'Chief Technology Officer',
-      bio: 'Former VP of Healthcare Technology at Philips. Expert in medical device integration and healthcare IT.',
+      name: 'Dr. Nalini Viswanath',
+      title: 'Co-founder - Telepulse',
+      bio: 'Paediatrician and Hospital Administrator bringing extensive healthcare management expertise and clinical leadership to advance accessible pediatric telemedicine.',
       image: 'https://images.pexels.com/photos/1068352/pexels-photo-1068352.jpeg?auto=compress&cs=tinysrgb&w=400',
-      education: 'MS - MIT, BS Computer Science - Carnegie Mellon'
-    },
-    {
-      name: 'Dr. James Wilson',
-      title: 'Chief Innovation Officer',
-      bio: 'Pioneering researcher in AI applications for pediatric medicine. Former head of innovation at Mayo Clinic.',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
-      education: 'MD/PhD - Johns Hopkins, MS Biomedical Engineering - Duke'
+      education: 'Paediatrician and Hospital Administrator'
     }
   ];
 
@@ -221,11 +207,11 @@ const AboutUs: React.FC = () => {
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
                 <div className="p-6">
                   <div className="flex items-start space-x-4">
-                    <img
+                    {/* <img
                       src={leader.image}
                       alt={leader.name}
                       className="w-16 h-16 rounded-xl object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    /> */}
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-[#001F5B] mb-1">{leader.name}</h3>
                       <div className="text-[#B22222] font-medium mb-3 text-sm">{leader.title}</div>
@@ -381,13 +367,7 @@ const AboutUs: React.FC = () => {
               <Users className="w-5 h-5" />
               <span>Explore Careers</span>
             </Link>
-            <Link
-              to="/partners"
-              className="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-[#001F5B] transition-all duration-300 flex items-center justify-center space-x-2"
-            >
-              <span>Become a Partner</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+         
           </div>
         </div>
       </section>
