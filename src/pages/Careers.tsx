@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import { Heart, Users, Award, MapPin, Clock, ArrowRight, Building, Briefcase, GraduationCap, Coffee,Send, CheckCircle } from 'lucide-react';
 
@@ -150,6 +152,13 @@ const Careers: React.FC = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.careers.title}
+        description={seoConfig.careers.description}
+        keywords={seoConfig.careers.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -570,7 +579,8 @@ const Careers: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default Careers;

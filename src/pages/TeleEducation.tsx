@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import { GraduationCap, CheckCircle, ArrowRight, Users, Clock, Award, BookOpen } from 'lucide-react';
 
@@ -72,6 +74,13 @@ const TeleEducation: React.FC = () => {
   // ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.education.title}
+        description={seoConfig.education.description}
+        keywords={seoConfig.education.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -321,7 +330,8 @@ const TeleEducation: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default TeleEducation;

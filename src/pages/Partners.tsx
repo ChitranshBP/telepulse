@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import { Building2, Users, Award, Handshake, CheckCircle, ArrowRight, Globe, Heart } from 'lucide-react';
 
@@ -138,6 +140,13 @@ const Partners: React.FC = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.partners.title}
+        description={seoConfig.partners.description}
+        keywords={seoConfig.partners.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -340,7 +349,8 @@ const Partners: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default Partners;

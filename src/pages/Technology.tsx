@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import {
   Monitor,
@@ -73,6 +75,13 @@ const Technology: React.FC = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.technology.title}
+        description={seoConfig.technology.description}
+        keywords={seoConfig.technology.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -650,7 +659,8 @@ const Technology: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default Technology;

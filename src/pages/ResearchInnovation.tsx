@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import { Search, CheckCircle, ArrowRight, Users, Clock, Award, BarChart3 } from 'lucide-react';
 
@@ -72,6 +74,13 @@ const ResearchInnovation: React.FC = () => {
   // ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.research.title}
+        description={seoConfig.research.description}
+        keywords={seoConfig.research.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -321,7 +330,8 @@ const ResearchInnovation: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default ResearchInnovation;

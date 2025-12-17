@@ -1,8 +1,17 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Shield, FileText, AlertTriangle } from 'lucide-react';
 
 const Legal: React.FC = () => {
   return (
+    <>
+      <SEO
+        title={seoConfig.legal.title}
+        description={seoConfig.legal.description}
+        keywords={seoConfig.legal.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -317,7 +326,8 @@ const Legal: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default Legal;

@@ -47,7 +47,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img
-              src="/WhatsApp Image 2025-09-16 at 13.37.39_d96be5ef.jpg"
+              src="/WhatsApp Image 2025-09-16 at 13.37.39_d96be5ef.webp"
               alt="Telepulse Logo"
               className="w-14 h-14 object-contain group-hover:scale-105 transition-transform duration-300"
             />

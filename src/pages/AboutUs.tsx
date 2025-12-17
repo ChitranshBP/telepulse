@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import {
   // Heart,
@@ -70,6 +72,13 @@ const AboutUs: React.FC = () => {
   // ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.about.title}
+        description={seoConfig.about.description}
+        keywords={seoConfig.about.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-16 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -372,7 +381,8 @@ const AboutUs: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default AboutUs;

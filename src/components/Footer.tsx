@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/WhatsApp Image 2025-09-16 at 13.37.39_d96be5ef.jpg"
+                src="/WhatsApp Image 2025-09-16 at 13.37.39_d96be5ef.webp"
                 alt="Telepulse Logo"
                 className="w-16 h-16 object-contain"
               />

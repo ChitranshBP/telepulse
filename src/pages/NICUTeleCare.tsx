@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import { Heart, CheckCircle, ArrowRight, Users, Clock, Award } from 'lucide-react';
 
@@ -45,6 +47,13 @@ const NICUTeleCare: React.FC = () => {
   // ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.nicu.title}
+        description={seoConfig.nicu.description}
+        keywords={seoConfig.nicu.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -253,7 +262,8 @@ const NICUTeleCare: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default NICUTeleCare;

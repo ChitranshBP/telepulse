@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
@@ -30,6 +32,13 @@ const Contact: React.FC = () => {
   };
 
   return (
+    <>
+      <SEO
+        title={seoConfig.contact.title}
+        description={seoConfig.contact.description}
+        keywords={seoConfig.contact.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-16 bg-[#001F5B] text-white">
@@ -306,7 +315,8 @@ const Contact: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default Contact;

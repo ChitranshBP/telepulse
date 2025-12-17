@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
 import { Heart, Users, Building2, Globe, TrendingUp, Award, Download, Play } from 'lucide-react';
 
@@ -77,6 +79,13 @@ const Impact: React.FC = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.impact.title}
+        description={seoConfig.impact.description}
+        keywords={seoConfig.impact.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -290,7 +299,8 @@ const Impact: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  
+    </>);
 };
 
 export default Impact;

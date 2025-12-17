@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import {
   Heart,
   Users,
@@ -79,7 +81,7 @@ const Home: React.FC = () => {
       icon: Heart,
       title: 'Tele NICU',
       description: 'Specialized neonatal monitoring with 24/7 expert consultation',
-      image: '/assets/Our Solutions-page/NICU-Tele-care.png',
+      image: '/assets/Our Solutions-page/NICU-Tele-care.webp',
       path: '/nicu'
     },
     {
@@ -93,7 +95,7 @@ const Home: React.FC = () => {
       icon: Search,
       title: 'Research & Innovation',
       description: 'Evidence-based protocols and clinical studies',
-      image: '/assets/Our Solutions-page/Research & Innovation.png',
+      image: '/assets/Our Solutions-page/Research & Innovation.webp',
       path: '/research'
     },
   ];
@@ -181,8 +183,14 @@ const Home: React.FC = () => {
   // }, []);
 
   return (
-    <div className="pt-20">
-      {/* Hero Section */}
+    <>
+      <SEO
+        title={seoConfig.home.title}
+        description={seoConfig.home.description}
+        keywords={seoConfig.home.keywords}
+      />
+      <div className="pt-20">
+        {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#001F5B] via-[#003875] to-[#001A4D] min-h-[600px]">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -285,7 +293,7 @@ const Home: React.FC = () => {
                 {/* Main Image Container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="random/Our-Vision.png"
+                    src="random/Our-Vision.webp"
                     alt="Revolutionize Pediatric Care"
                     className="w-full h-[500px] object-cover"
                   />
@@ -491,7 +499,7 @@ const Home: React.FC = () => {
             <div className="relative flex items-center justify-center">
   <div className=" rounded-2xl p-4 md:p-8 text-white overflow-hidden">
     <img
-      src="assets/Advanced Technology/Technology-Partners.png"
+      src="assets/Advanced Technology/Technology-Partners.webp"
       alt="Implementation Timeline"
       className="w-full h-auto rounded-xl object-cover"
     />
@@ -603,7 +611,7 @@ const Home: React.FC = () => {
               <div className="absolute -inset-3 bg-gradient-to-r from-[#00CFE6]/20 to-[#B22222]/20 rounded-2xl blur-xl"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="random/stats-replacer.jpg"
+                  src="random/stats-replacer.webp"
                   alt="What We Do"
                   className="w-full h-full object-cover"
                 />
@@ -813,6 +821,7 @@ const Home: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

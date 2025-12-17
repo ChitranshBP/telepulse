@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoConfig } from '../utils/seoConfig';
 import { BookOpen, Download, Video } from 'lucide-react';
 
 const Resources: React.FC = () => {
@@ -120,6 +122,13 @@ const Resources: React.FC = () => {
   // ];
 
   return (
+    <>
+      <SEO
+        title={seoConfig.resources.title}
+        description={seoConfig.resources.description}
+        keywords={seoConfig.resources.keywords}
+      />
+      
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative py-6 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
@@ -363,7 +372,7 @@ const Resources: React.FC = () => {
       </section> */}
 
       {/* Call to Action */}
-      <section className="py-6 bg-[#001F5B] text-white">
+      {/* <section className="py-6 bg-[#001F5B] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Stay Connected</h2>
           <p className="text-base mb-6 max-w-3xl mx-auto">
@@ -381,9 +390,10 @@ const Resources: React.FC = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
-  );
+  
+    </>);
 };
 
 export default Resources;
