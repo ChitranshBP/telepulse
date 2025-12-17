@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
@@ -144,34 +145,57 @@ const Header: React.FC = () => {
             <div className="px-4 py-4 space-y-3">
               {navigation.map((item) => (
                 <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`block text-sm font-medium transition-colors duration-200 py-2 ${
-                      location.pathname === item.path || (item.submenu && item.submenu.some(sub => location.pathname === sub.path))
-                        ? 'text-[#B22222]'
-                        : 'text-gray-700 hover:text-[#B22222]'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.path}
-                          onClick={() => setIsMenuOpen(false)}
-                          className={`block text-sm transition-colors duration-200 py-1 ${
-                            location.pathname === subItem.path
-                              ? 'text-[#B22222] font-medium'
-                              : 'text-gray-600 hover:text-[#B22222]'
-                          }`}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
+                  {item.submenu ? (
+                    <div>
+                      <button
+                        onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
+                        className={`flex items-center justify-between w-full text-sm font-medium transition-colors duration-200 py-2 ${
+                          location.pathname === item.path || item.submenu.some(sub => location.pathname === sub.path)
+                            ? 'text-[#B22222]'
+                            : 'text-gray-700 hover:text-[#B22222]'
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isMobileSolutionsOpen && (
+                        <div className="ml-4 mt-2 space-y-2">
+                          <Link
+                            to={item.path}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="block text-sm font-medium text-gray-700 hover:text-[#B22222] transition-colors duration-200 py-1"
+                          >
+                            All Solutions
+                          </Link>
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              onClick={() => setIsMenuOpen(false)}
+                              className={`block text-sm transition-colors duration-200 py-1 ${
+                                location.pathname === subItem.path
+                                  ? 'text-[#B22222] font-medium'
+                                  : 'text-gray-600 hover:text-[#B22222]'
+                              }`}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block text-sm font-medium transition-colors duration-200 py-2 ${
+                        location.pathname === item.path
+                          ? 'text-[#B22222]'
+                          : 'text-gray-700 hover:text-[#B22222]'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
                   )}
                 </div>
               ))}
