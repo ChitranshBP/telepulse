@@ -13,7 +13,7 @@ const Solutions: React.FC = () => {
       title: 'Tele PICU',
       subtitle: 'Comprehensive Critical Care',
       description: 'Real-time monitoring and intervention for pediatric patients in intensive care units across all age groups.',
-      image: 'random/NICU-Tele-care.webp',
+      image: 'assets/Pediatric Tele-ICU/tele-picu.webp',
       problem: 'Shortage of pediatric intensivists and uneven distribution of expertise leads to care gaps.',
       model: 'Continuous remote monitoring with immediate intervention capabilities and collaborative care planning.',
       benefits: [
@@ -34,7 +34,7 @@ const Solutions: React.FC = () => {
       title: 'Tele NICU',
       subtitle: 'Specialized Neonatal Intensive Care',
       description: 'Advanced telemedicine solutions specifically designed for the unique challenges of neonatal critical care.',
-      image: 'assets/Our Solutions-page/NICU Tele-care.webp',
+      image: 'assets/new/nicu-f.webp',
       problem: 'Many hospitals lack specialized neonatal expertise, leading to suboptimal outcomes for critically ill newborns.',
       model: '24/7 remote monitoring and consultation with board-certified neonatologists and NICU specialists.',
       benefits: [
@@ -56,7 +56,7 @@ const Solutions: React.FC = () => {
       title: 'Tele-Education',
       subtitle: 'Professional Development & Training',
       description: 'Comprehensive education and training programs for healthcare professionals in pediatric critical care.',
-      image: 'assets/Our Solutions-page/Research & Innovation-The Problem.webp',
+      image: 'assets/Pediatric Tele-ICU/tele-teaching.webp',
       problem: 'Limited access to specialized pediatric training programs and continuing education opportunities.',
       model: 'Interactive online learning platform with accredited courses, simulation training, and mentorship programs.',
       benefits: [

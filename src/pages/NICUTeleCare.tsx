@@ -59,7 +59,7 @@ const NICUTeleCare: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="/assets/NICU Tele-care/NICU-Tele-care.png"
+            src="assets/new/nicu-f.webp"
             alt="Tele NICU"
             className="hero-bg-image"
           />
@@ -99,7 +99,7 @@ const NICUTeleCare: React.FC = () => {
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="random/NICU-Tele-care.png"
+                src="assets/new/nicu-f.webp"
                 alt="NICU Technology"
                 className="feature-image shadow-2xl"
               />

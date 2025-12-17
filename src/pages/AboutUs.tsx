@@ -126,7 +126,7 @@ const AboutUs: React.FC = () => {
             </div>
             <div className="relative flex items-center justify-center">
               <img
-                src="random/Transform-Pediatric-critical-care.png"
+                src="assets/new/about-f.webp"
                 alt="Healthcare Technology"
                 className="feature-image shadow-2xl"
               />

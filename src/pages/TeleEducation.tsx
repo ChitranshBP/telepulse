@@ -86,7 +86,7 @@ const TeleEducation: React.FC = () => {
       <section className="relative py-20 bg-gradient-to-br from-[#001F5B] to-[#B22222] text-white">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="assets/Our Solutions-page/Our-Solutions-banner.png"
+            src="assets/Pediatric Tele-ICU/tele-teaching.webp"
             alt="Medical Education"
             className="hero-bg-image"
           />

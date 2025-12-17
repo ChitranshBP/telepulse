@@ -81,7 +81,7 @@ const Home: React.FC = () => {
       icon: Heart,
       title: 'Tele NICU',
       description: 'Specialized neonatal monitoring with 24/7 expert consultation',
-      image: '/assets/Our Solutions-page/NICU-Tele-care.webp',
+      image: 'assets/new/nicu-f.webp',
       path: '/nicu'
     },
     {
@@ -293,7 +293,7 @@ const Home: React.FC = () => {
                 {/* Main Image Container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="random/Our-Vision.webp"
+                    src="assets/new/home_firs-f.webp"
                     alt="Revolutionize Pediatric Care"
                     className="w-full h-[500px] object-cover"
                   />
