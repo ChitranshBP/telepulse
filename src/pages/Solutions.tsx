@@ -8,7 +8,7 @@ const Solutions: React.FC = () => {
         {
       id: 'picu',
       icon: Stethoscope,
-      title: 'Pediatric Tele-ICU',
+      title: 'Tele PICU',
       subtitle: 'Comprehensive Critical Care',
       description: 'Real-time monitoring and intervention for pediatric patients in intensive care units across all age groups.',
       image: 'random/NICU-Tele-care.png',
@@ -29,7 +29,7 @@ const Solutions: React.FC = () => {
     {
       id: 'nicu',
       icon: Heart,
-      title: 'NICU Tele-care',
+      title: 'Tele NICU',
       subtitle: 'Specialized Neonatal Intensive Care',
       description: 'Advanced telemedicine solutions specifically designed for the unique challenges of neonatal critical care.',
       image: 'assets/Our Solutions-page/NICU Tele-care.png',

@@ -70,14 +70,14 @@ const Home: React.FC = () => {
   const solutions = [
     {
       icon: Stethoscope,
-      title: 'Pediatric Tele-ICU',
+      title: 'Tele PICU',
       description: 'Comprehensive critical care with real-time intervention',
-      image: '/assets/Our Solutions-page/Pediatric-Tele-ICU.png',
+      image: 'assets/Pediatric Tele-ICU/tele-picu.webp',
       path: '/picu'
     },
     {
       icon: Heart,
-      title: 'NICU Tele-care',
+      title: 'Tele NICU',
       description: 'Specialized neonatal monitoring with 24/7 expert consultation',
       image: '/assets/Our Solutions-page/NICU-Tele-care.png',
       path: '/nicu'
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
       icon: GraduationCap,
       title: 'Tele-Education',
       description: 'Professional development and certification programs',
-      image: '/assets/Our Solutions-page/Tele-Education.png',
+      image: 'assets/Pediatric Tele-ICU/tele-teaching.webp',
       path: '/education'
     },
     {

@@ -117,7 +117,7 @@ const TeleEducation: React.FC = () => {
             </div>
             <div>
               <img
-                src="assets/Our Solutions-page/Tele-Education.png"
+                src="assets/Pediatric Tele-ICU/tele-teaching.webp"
                 alt="Medical Education Technology"
                 className="feature-image shadow-2xl"
               />

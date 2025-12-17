@@ -24,8 +24,8 @@ const Header: React.FC = () => {
       name: 'Solutions',
       path: '/solutions',
       submenu: [
-        { name: 'NICU Tele-care', path: '/nicu' },
-        { name: 'Pediatric Tele-ICU', path: '/picu' },
+        { name: 'Tele NICU', path: '/nicu' },
+        { name: 'Tele PICU', path: '/picu' },
         { name: 'Tele-Education', path: '/education' },
         // { name: 'Research & Innovation', path: '/research' }
       ]
@@ -46,10 +46,10 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src="/WhatsApp Image 2025-09-16 at 13.37.39_d96be5ef.jpg" 
-              alt="Telepulse Logo" 
-              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform duration-300"
+            <img
+              src="/WhatsApp Image 2025-09-16 at 13.37.39_d96be5ef.jpg"
+              alt="Telepulse Logo"
+              className="w-14 h-14 object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <span className="text-2xl font-bold text-[#001F5B]">Telepulse</span>
           </Link>

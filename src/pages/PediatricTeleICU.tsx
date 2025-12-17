@@ -51,7 +51,7 @@ const PediatricTeleICU: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <img
             src="/assets/Pediatric Tele-ICU/Pediatric-Tele-ICU.png"
-            alt="Pediatric Tele-ICU"
+            alt="Tele PICU"
             className="hero-bg-image"
           />
         </div>
@@ -59,7 +59,7 @@ const PediatricTeleICU: React.FC = () => {
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
               <Stethoscope className="w-16 h-16 text-[#00CFE6] mr-4" />
-              <h1 className="text-3xl lg:text-4xl font-semibold">Pediatric Tele-ICU</h1>
+              <h1 className="text-3xl lg:text-4xl font-semibold">Tele PICU</h1>
             </div>
             <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Real-time monitoring and intervention for pediatric patients in intensive care units 
@@ -90,7 +90,7 @@ const PediatricTeleICU: React.FC = () => {
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="random/Pediatric-Tele-ICU.png"
+                src="assets/Pediatric Tele-ICU/tele-picu.webp"
                 alt="Pediatric ICU Technology"
                 className="feature-image shadow-2xl"
               />
@@ -188,8 +188,8 @@ const PediatricTeleICU: React.FC = () => {
                 
                 <h4 className="text-lg font-medium text-[#001F5B] mb-3">Implementation</h4>
                 <p className="text-gray-600 mb-4">
-                  Deployed multi-site Pediatric Tele-ICU with centralized monitoring, expert consultation, 
-                  and standardized protocols. Comprehensive training program for nursing staff and physicians 
+                  Deployed multi-site Tele PICU with centralized monitoring, expert consultation,
+                  and standardized protocols. Comprehensive training program for nursing staff and physicians
                   across all locations.
                 </p>
               </div>
@@ -233,8 +233,8 @@ const PediatricTeleICU: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Enhance Your PICU</h2>
           <p className="text-base mb-6 max-w-3xl mx-auto">
-            Ready to provide expert pediatric critical care at your institution? Discover how 
-            Pediatric Tele-ICU can transform your critical care capabilities.
+            Ready to provide expert pediatric critical care at your institution? Discover how
+            Tele PICU can transform your critical care capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

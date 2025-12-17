@@ -15,7 +15,7 @@ const Impact: React.FC = () => {
       title: 'Regional Medical Center NICU Transformation',
       location: 'Texas, USA',
       challenge: 'Level II NICU lacking specialized neonatal expertise',
-      solution: 'Deployed Telepulse NICU Tele-care with 24/7 neonatologist support',
+      solution: 'Deployed Telepulse Tele NICU with 24/7 neonatologist support',
       results: [
         '40% reduction in neonatal mortality',
         '25% decrease in average length of stay',
@@ -29,7 +29,7 @@ const Impact: React.FC = () => {
       title: 'Children\'s Hospital Network Expansion',
       location: 'Ontario, Canada',
       challenge: 'Rural hospitals lacking pediatric critical care access',
-      solution: 'Multi-site Pediatric Tele-ICU implementation across 8 facilities',
+      solution: 'Multi-site Tele PICU implementation across 8 facilities',
       results: [
         '50% faster response to critical events',
         '30% reduction in patient transfers',

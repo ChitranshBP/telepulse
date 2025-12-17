@@ -51,7 +51,7 @@ const NICUTeleCare: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <img
             src="/assets/NICU Tele-care/NICU-Tele-care.png"
-            alt="NICU Tele-care"
+            alt="Tele NICU"
             className="hero-bg-image"
           />
         </div>
@@ -59,7 +59,7 @@ const NICUTeleCare: React.FC = () => {
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
               <Heart className="w-16 h-16 text-[#00CFE6] mr-4" />
-              <h1 className="text-3xl lg:text-4xl font-semibold">NICU Tele-care</h1>
+              <h1 className="text-3xl lg:text-4xl font-semibold">Tele NICU</h1>
             </div>
             <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Specialized neonatal intensive care monitoring and support through advanced telemedicine technology, 
@@ -150,7 +150,7 @@ const NICUTeleCare: React.FC = () => {
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Proven Results</h2>
             <p className="text-base text-gray-300 max-w-3xl mx-auto">
-              Real outcomes from hospitals using our NICU Tele-care solution
+              Real outcomes from hospitals using our Tele NICU solution
             </p>
           </div>
 
@@ -188,7 +188,7 @@ const NICUTeleCare: React.FC = () => {
                 
                 <h4 className="text-lg font-medium text-[#001F5B] mb-3">Implementation</h4>
                 <p className="text-gray-600 mb-4">
-                  Deployed Telepulse NICU Tele-care with 24/7 neonatologist coverage, integrated monitoring systems, 
+                  Deployed Telepulse Tele NICU with 24/7 neonatologist coverage, integrated monitoring systems,
                   and standardized care protocols. Staff received comprehensive training and ongoing support.
                 </p>
               </div>
@@ -232,8 +232,8 @@ const NICUTeleCare: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-semibold mb-4">Transform Your NICU</h2>
           <p className="text-base mb-6 max-w-3xl mx-auto">
-            Ready to provide world-class neonatal care at your institution? Let's discuss how 
-            NICU Tele-care can improve outcomes for your smallest patients.
+            Ready to provide world-class neonatal care at your institution? Let's discuss how
+            Tele NICU can improve outcomes for your smallest patients.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

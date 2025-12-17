@@ -13,7 +13,7 @@ const Resources: React.FC = () => {
   //     readTime: '5 min read'
   //   },
   //   {
-  //     title: 'Implementing NICU Tele-care: Best Practices and Lessons Learned',
+  //     title: 'Implementing Tele NICU: Best Practices and Lessons Learned',
   //     excerpt: 'A comprehensive guide based on successful implementations across 50+ healthcare institutions worldwide.',
   //     author: 'Dr. Michael Rodriguez',
   //     date: '2025-01-12',
