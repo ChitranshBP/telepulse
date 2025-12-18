@@ -374,7 +374,7 @@ const Careers: React.FC = () => {
             </p>
           </div>
 
-          <form acceptCharset="UTF-8" action="https://app.formester.com/forms/r5VMEtTI2/submissions" method="POST" className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+          <form acceptCharset="UTF-8" action="https://app.formester.com/forms/r5VMEtTI2/submissions" method="POST" encType="multipart/form-data" className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
             {/* Hidden redirect field for Formester */}
             <input type="hidden" name="_redirect" value={`${window.location.origin}/thank-you`} />
 
