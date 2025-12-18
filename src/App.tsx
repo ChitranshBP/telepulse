@@ -16,6 +16,7 @@ import Resources from './pages/Resources';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
+import ThankYou from './pages/ThankYou';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </Layout>
     </Router>

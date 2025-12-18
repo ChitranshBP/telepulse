@@ -1,35 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SEO from '../components/SEO';
 import { seoConfig } from '../utils/seoConfig';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    organization: '',
-    role: '',
-    phone: '',
-    inquiry: '',
-    message: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   return (
     <>
@@ -121,141 +95,114 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div>
-              {isSubmitted ? (
-                <div className="bg-white rounded-2xl shadow-xl p-8 text-center h-full flex flex-col justify-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-[#B22222] rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-10 h-10 text-white" />
+              <form acceptCharset="UTF-8" action="https://app.formester.com/forms/r5VMEtTI2/submissions" method="POST" className="bg-white rounded-2xl shadow-xl p-6 h-full">
+                <h3 className="text-xl font-semibold text-[#001F5B] mb-6">Send Us a Message</h3>
+
+                {/* Hidden redirect field for Formester */}
+                <input type="hidden" name="_redirect" value={`${window.location.origin}/thank-you`} />
+
+                <div className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-[#001F5B] mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                      placeholder="Your full name"
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#001F5B] mb-3">Message Sent Successfully!</h3>
-                  <p className="text-base text-gray-600 mb-6">
-                    Thank you for reaching out. Our team will review your message and get back to you within 24 hours.
-                  </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto"
-                  >
-                    Send Another Message
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 h-full">
-                  <h3 className="text-xl font-semibold text-[#001F5B] mb-6">Send Us a Message</h3>
 
-                  <div className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-[#001F5B] mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                        placeholder="Your full name"
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-[#001F5B] mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                      placeholder="your@email.com"
+                    />
+                  </div>
 
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-[#001F5B] mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                        placeholder="your@email.com"
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-[#001F5B] mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                      placeholder="+91 XXXXX XXXXX"
+                    />
+                  </div>
 
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-[#001F5B] mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                        placeholder="+91 XXXXX XXXXX"
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="organization" className="block text-sm font-medium text-[#001F5B] mb-2">
+                      Organization *
+                    </label>
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
+                      required
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
+                      placeholder="Hospital or organization name"
+                    />
+                  </div>
 
-                    <div>
-                      <label htmlFor="organization" className="block text-sm font-medium text-[#001F5B] mb-2">
-                        Organization *
-                      </label>
-                      <input
-                        type="text"
-                        id="organization"
-                        name="organization"
-                        required
-                        value={formData.organization}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                        placeholder="Hospital or organization name"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="inquiry" className="block text-sm font-medium text-[#001F5B] mb-2">
-                        Inquiry Type *
-                      </label>
-                      <select
-                        id="inquiry"
-                        name="inquiry"
-                        required
-                        value={formData.inquiry}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
-                      >
-                        <option value="">Select inquiry type</option>
-                        <option value="demo">Request a Demo</option>
-                        <option value="partnership">Partnership Inquiry</option>
-                        <option value="implementation">Implementation Support</option>
-                        <option value="training">Training & Education</option>
-                        <option value="technical">Technical Support</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-[#001F5B] mb-2">
-                        Message *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        rows={4}
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 resize-none"
-                        placeholder="Tell us about your needs..."
-                      ></textarea>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                  <div>
+                    <label htmlFor="inquiry" className="block text-sm font-medium text-[#001F5B] mb-2">
+                      Inquiry Type *
+                    </label>
+                    <select
+                      id="inquiry"
+                      name="inquiry"
+                      required
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
                     >
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </button>
-                    <p className="text-sm text-gray-500 text-center">
-                      We'll respond within 24 hours during business days
-                    </p>
+                      <option value="">Select inquiry type</option>
+                      <option value="demo">Request a Demo</option>
+                      <option value="partnership">Partnership Inquiry</option>
+                      <option value="implementation">Implementation Support</option>
+                      <option value="training">Training & Education</option>
+                      <option value="technical">Technical Support</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
-                </form>
-              )}
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-[#001F5B] mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 resize-none"
+                      placeholder="Tell us about your needs..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                  >
+                    <Send className="w-5 h-5" />
+                    <span>Send Message</span>
+                  </button>
+                  <p className="text-sm text-gray-500 text-center">
+                    We'll respond within 24 hours during business days
+                  </p>
+                </div>
+              </form>
             </div>
 
             {/* Map and Address */}

@@ -1,55 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SEO from '../components/SEO';
 import { seoConfig } from '../utils/seoConfig';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Award, MapPin, Clock, ArrowRight, Building, Briefcase, GraduationCap, Coffee,Send, CheckCircle } from 'lucide-react';
+import { Heart, Users, Award, MapPin, Clock, ArrowRight, Building, Briefcase, GraduationCap, Coffee, Send } from 'lucide-react';
 
 const Careers: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    position: '',
-    experience: '',
-    coverLetter: '',
-    resume: null as File | null
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        position: '',
-        experience: '',
-        coverLetter: '',
-        resume: null
-      });
-    }, 3000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setFormData({
-        ...formData,
-        resume: e.target.files[0]
-      });
-    }
-  };
 
   const benefits = [
     {
@@ -419,24 +374,10 @@ const Careers: React.FC = () => {
             </p>
           </div>
 
-          {isSubmitted ? (
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-[#B22222] rounded-full flex items-center justify-center">
-                <CheckCircle className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-[#001F5B] mb-3">Application Submitted Successfully!</h3>
-              <p className="text-base text-gray-600 mb-6">
-                Thank you for your interest in joining Telepulse. Our HR team will review your application and get back to you within 5-7 business days.
-              </p>
-              <button
-                onClick={() => setIsSubmitted(false)}
-                className="bg-[#B22222] text-white px-8 py-3 rounded-full font-medium hover:bg-[#001F5B] hover:shadow-xl hover:scale-105 transition-all duration-300"
-              >
-                Submit Another Application
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+          <form acceptCharset="UTF-8" action="https://app.formester.com/forms/r5VMEtTI2/submissions" method="POST" className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+            {/* Hidden redirect field for Formester */}
+            <input type="hidden" name="_redirect" value={`${window.location.origin}/thank-you`} />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-[#001F5B] mb-2">
@@ -447,8 +388,6 @@ const Careers: React.FC = () => {
                     id="name"
                     name="name"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
                     placeholder="Your full name"
                   />
@@ -463,8 +402,6 @@ const Careers: React.FC = () => {
                     id="email"
                     name="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
                     placeholder="your@email.com"
                   />
@@ -481,8 +418,6 @@ const Careers: React.FC = () => {
                     id="phone"
                     name="phone"
                     required
-                    value={formData.phone}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
                     placeholder="+91 XXXXX XXXXX"
                   />
@@ -496,8 +431,6 @@ const Careers: React.FC = () => {
                     id="position"
                     name="position"
                     required
-                    value={formData.position}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
                   >
                     <option value="">Select a position</option>
@@ -516,8 +449,6 @@ const Careers: React.FC = () => {
                   id="experience"
                   name="experience"
                   required
-                  value={formData.experience}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200"
                 >
                   <option value="">Select experience level</option>
@@ -538,7 +469,6 @@ const Careers: React.FC = () => {
                     id="resume"
                     name="resume"
                     required
-                    onChange={handleFileChange}
                     accept=".pdf,.doc,.docx"
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#00CFE6] file:text-[#001F5B] hover:file:bg-[#001F5B] hover:file:text-white"
                   />
@@ -555,8 +485,6 @@ const Careers: React.FC = () => {
                   name="coverLetter"
                   required
                   rows={6}
-                  value={formData.coverLetter}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#00CFE6] focus:border-transparent transition-colors duration-200 resize-none"
                   placeholder="Tell us why you're interested in this position and what makes you a great fit for Telepulse..."
                 ></textarea>
@@ -575,7 +503,6 @@ const Careers: React.FC = () => {
                 </p>
               </div>
             </form>
-          )}
         </div>
       </section>
     </div>
